@@ -1,0 +1,160 @@
+/**index.wxss**/
+.data-item{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  width: 100%;
+  height: 100rpx;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close{
+ flex: 0 0 50rpx;
+ display: flex;
+ justify-content: center;
+ background: gray;
+ 
+}
+
+.container{
+  margin-top: 30rpx;
+}
+
+.banner-wrap{
+  position: relative;
+}
+
+.banner{
+ 
+  width: 100%;
+  height: 420rpx;
+}
+
+.item-wrap{
+  box-sizing: border-box;
+  display: flex;
+  
+  justify-content: space-between;
+   flex: 1;
+   padding: 0 30rpx;
+   margin-bottom: 10rpx;
+   
+  
+}
+.item{
+ flex: 1;
+  height: 162rpx;
+  /* background: #313a3d; */
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  
+}
+.navigator-hover{
+  background: rgba(0,0,0,0.85);
+  opacity: 1;
+}
+.item-left{
+  margin-right: 10rpx;
+}
+
+.icon-storage{
+  width: 74rpx;
+  height: 59rpx;
+}
+.icon-removal{
+  width: 97rpx;
+  height: 54rpx;
+}
+.icon-check{
+  width:75rpx;
+  height: 67rpx;
+}
+.icon-check1 {
+  margin-left: 9rpx;
+}
+.item-title-wrap{
+  margin: 0 auto;
+  margin-top: 6rpx;
+  width: 70%;
+  text-align:center;
+}
+.item-title{
+  color: #fff;
+  display: inline-block;
+  width:100%;
+}
+.item-title:first-child{
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+.item-title1:last-child{
+  position: relative;
+  top: -5rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color:#f6c6a9;
+  /* color:#fdf5ee; */
+}
+.icon-histry{
+  width: 60rpx;
+  height: 60rpx
+}
+.icon-my{
+  width: 60rpx;
+  height: 60rpx;
+}
+.item-one{
+  background: rgba(0,0,0,0.8);
+}
+.icon-help{
+  width: 74rpx;
+  height:59rpx;
+}
+.icon-report{
+  width: 80rpx;
+  height:80rpx;
+}
+.plus{
+  
+  position: absolute;
+  left: 53rpx;
+  top: 46rpx;
+  width: 38rpx;
+  height: 38rpx;
+  z-index: 9;
+}
+.number-wrap{
+  position: absolute;
+  top: 63rpx;
+  left: 70rpx;
+  width: 280rpx;
+  height: 106rpx;
+  background: #fff;
+  border: 1px solid #e2e2e3;
+  text-align: center;
+}
+.help-tips{
+  color: #313a3d;
+  font-size: 20rpx;
+}
+.number{
+  display: inline-block;
+  font-size: 34rpx;
+  color: #e1000f;
+  padding-top: 5rpx;
+}
+
+.logo{
+  position: absolute;
+  top: 86rpx;
+  left: 20%;
+  width: 61rpx;
+  height: 31rpx;
+
+}

@@ -1,0 +1,55 @@
+<v-nav title="盘点" backFlag="true"></v-nav>
+<view class="margin-container"></view>
+<view class="container">
+  <view class="banner">
+     <image src='../../images/sao.png' class='scan' bindtap='scan'></image>
+     <text>添加二维码</text>
+  </view>
+</view>
+<!-- <view class="dn-number">
+  <text class="dn-title">DN单号</text>
+  <text>9922652315</text>
+</view> -->
+
+ <!-- <view class='dn-number'>
+  <text class="dn-title addBold">仓库:</text>
+    <picker mode="multiSelector"  bindchange="bindStartPickerChange" bindcancel="listCancel" bindcolumnchange="bindStartPickerColumnChange" value="{{multiIndexStart}}" range="{{formatting}}">
+      <view class="picker">
+        {{startPlaceTips}}
+        {{formatting[0][multiIndexStart[0]]}}  {{formatting[1][multiIndexStart[1]]}}
+      </view>
+    </picker>
+  </view> -->
+<view class="dn-number">
+  <view>
+    <text class="dn-title">总桶数</text>
+     <text class='dn-num'>{{Qty}}</text>
+
+  </view >
+   <view class='two'>
+    <text class="dn-title">已扫码</text>
+     <text class='dn-num green'>{{list.length}}</text>
+
+  </view>
+</view>
+<view class='list'>
+
+  <view wx:key="{{index}}" data-index="{{index}}" bindtap="onClose"  wx:for="{{list}}">
+   <view class="list-item {{index%2 ?'white':'grey'  }}" > 
+    <view class='data-item' >
+      <text>{{item}}</text>
+     
+    </view>
+    </view>
+  </view >
+
+</view>
+  
+<view class='footer'>
+
+  <navigator url='../../pages/index/index' class='footer-item home'>返回首页</navigator>
+
+ 
+  <button class='footer-item next sub-btn' bindtap="present" >提交</button>
+
+</view>

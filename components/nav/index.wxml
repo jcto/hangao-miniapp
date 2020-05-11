@@ -1,0 +1,11 @@
+<view class="container">
+  <!-- <image src='../../images/navlogo.png' class='logo'></image> -->
+ 
+   <slot name="logo"  ></slot>
+  
+  <view class='title'>{{title}}</view>
+  <view class='back-wrap' wx:if="{{backFlag}}" bindtap='goBack'>
+     <image src='../../images/backArrowWhite.png' class='back-icon'></image>
+     <text class="backtitle">返回</text>
+  </view>
+</view>

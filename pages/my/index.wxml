@@ -1,0 +1,22 @@
+<!--pages/my/index.wxml-->
+<v-nav title="个人中心"  back="{{back}} "    custom="true" bindgoPrev="goPrev"  backFlag="false"></v-nav>
+<view class="my-item margin-container">
+  <text class='Titile'>用户账号：</text>
+  <text class='Content'>{{phone}}</text>
+</view>
+<button  class="my-item contact" open-type="contact">在线客服 上午9点~下午6点(点击对话)</button>
+<view  class="my-item contact" bindtap="contact">热线电话 400-856-0969
+</view>
+<navigator url="../help/index" class="my-item">
+  <text class='Titile'>帮助中心 </text>
+ 
+</navigator>
+<!-- 
+<navigator url="../modification/index" class="my-item">
+  <text class='Titile'>修改密码 </text>
+  
+</navigator> -->
+<view class='btn-wrap'>
+  <view class="btn" bindtap='getOut'>退出登录</view>
+</view>
+

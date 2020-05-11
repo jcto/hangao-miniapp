@@ -1,0 +1,103 @@
+/* pages/login/login.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   margin-top: 140rpx;
+  }
+  .logo{
+    margin-top: 68rpx;
+      width: 210rpx;
+     
+}
+.logo{
+  margin-top: 68rpx;
+  width: 210rpx;
+  height: 120rpx;
+}
+.title{
+  margin: 50rpx 0 33rpx 0;
+ font-size: 41.239rpx;
+color: rgb(225, 0, 15);
+  text-align: center;
+
+ 
+}
+.ball{
+  position: fixed;
+  bottom: 0;
+  width: 610rpx;
+  height: 525rpx;
+}
+.company{
+  position: fixed;
+  bottom: 50rpx;
+  font-size: 21rpx;
+  color: #828c96;
+   
+}
+
+/* 表单 */
+.form{
+  width: 65.6%;
+}
+
+.label{
+  display: inline-block;
+  width: 115rpx !important;
+  font-size: 28rpx;
+ color: #828c96;
+ text-align: center;
+}
+
+.user-tips{
+  position: absolute;
+  bottom:-30rpx ;
+  left: 110rpx;
+  font-size: 22rpx;
+  color: red;
+
+}
+
+.item-wrap{
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 34rpx;
+  height: 66rpx;
+}
+.item-wrap::before{
+  position: absolute;
+  content: "";
+  top: -0rpx;
+  left: 0;
+  z-index: 99;
+  width: 5rpx;
+  height: 66rpx;
+  background: #828c96;
+
+}
+
+.btn_login{
+  margin-top: 50rpx;
+  height: 66rpx;
+  background: #e1000f;
+  color: #fff;
+  line-height: 66rpx;
+  font-size: 29rpx;
+  border-radius: 0;
+}
+
+
+.else-option{
+  margin-top: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 26rpx;
+  font-size:23rpx;
+  color: #313a3d;
+
+}
+.serveNum{
+  bottom:75rpx;
+}

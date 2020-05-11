@@ -1,0 +1,25 @@
+<!--pages/help/index.wxml-->
+<v-nav title="帮助中心"  back="{{back}}" backFlag="false"></v-nav>
+<view class="question-wrap margin-container ">
+  <view class="question-item">
+    <view class="question-item-title">1.桶编号在哪里扫描?</view>
+    <view class="question-item-content">在桶的栏杆上如下图</view>
+    <image src="https://recycle.utscchina.com/image/LabelSetup_001.jpg" class="thumbnail"></image>
+  </view>
+    <view class="question-item">
+    <view class="question-item-title">2.Tank单号或者DN单号错误信息扫描错误怎么处理？</view>
+    <view class="question-item-content">如未提交可以删除重新提交，如已提交可以联系400-856-0969 转 1 进行修改</view>
+  </view>
+    <!-- <view class="question-item">
+    <view class="question-item-title">页面按钮无反应闪退怎么办</view>
+    <view class="question-item-content">退出小程序清理后台重新进入</view>
+  </view> -->
+   <view class="question-item">
+    <view class="question-item-title">如以上问题还是未能帮助您，请联系 400-856-0969 客服中心 处理
+</view>
+    <!-- <view class="question-item-content">
+      <view>XXX仓库：12313131</view>
+      <view>XXX仓库：1231313131</view>
+    </view> -->
+  </view>
+</view>

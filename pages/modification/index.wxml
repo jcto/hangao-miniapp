@@ -1,0 +1,25 @@
+
+<v-nav title="修改密码"  back="{{back}}" backFlag="false"></v-nav>
+<view class="margin-container"></view>
+		<form class="resForm" bindsubmit="formSubmit_resForm">
+			<view class="input-item">
+       <view class="tips" hidden="{{origMsg===''}}">{{origMsg}}</view>
+        <label for="username">原密码</label> 
+        <input id="username" type="password" bindblur="originalEnd" placeholder="请输入原密码"/>
+      </view>
+			<view class="input-item">
+       <view class="tips" hidden="{{!repeatFlag}}">{{repeatMsg}}</view>
+        <label for="organization">新密码</label>
+        <input id="organization" type="password" bindblur="newEnd" placeholder="请输入新密码"/>
+      </view>
+      	<view class="input-item">
+        <view class="tips" hidden="{{!repeatFlag}}">{{repeatMsg}}</view>
+        <label for="repeatPassword">重复密码</label>
+        <input id="repeatPassword" type="password"  bindblur="repeatEnd"  placeholder="重复密码"/>
+      </view>
+			<button  class="sub-btn" formType="submit" >立即修改</button>
+		</form>
+	
+		
+<v-toast isShow="{{toastContent}}" content="{{toastContent}}" bindok="ok"  ></v-toast>
+

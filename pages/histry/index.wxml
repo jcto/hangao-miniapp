@@ -1,0 +1,148 @@
+<!--pages/histry/index.wxml-->
+<v-nav title="历史订单" class="van-title"   custom="true" bindgoPrev="goPrev" back="{{back}}" backFlag="false"></v-nav>
+
+
+
+<view class="tips" hidden="{{tips === ''}}">{{tips}}</view>
+<view class="nav margin-container">
+  <view class="nav-item">
+    <text class="item-text {{navItem === -1?'active-item ':''}}" bindtap="chosenNavItem" data-key="-1">全部订单</text>
+  </view>
+  <view class="nav-item">
+    <text  class="item-text {{navItem === 0?'active-item':''}}" bindtap="chosenNavItem"  data-key="0">入库订单</text>
+  </view>
+  <view class="nav-item">
+    <text  class="item-text {{navItem === 1?'active-item':''}}" bindtap="chosenNavItem"  data-key="1">出库订单</text>
+  </view>
+</view>
+<!--全部订单  -->
+
+<view class="histryList">
+
+  
+ <view class="indent" hidden="{{navItem !== -1}}"  wx:for="{{allHistry}}"  wx:key="{{index}}" bindtap="toDetail" data-detail="{{item}}"> 
+   <view  class="indent-item {{index%2 ?'white':'grey'  }}"  >
+    <!-- <view class="indent-goods-wrap">
+      <image class="indent-goods-img"></image>
+    </view> -->
+    <view class="indent-info">
+      <view class="">
+        <text class="indent-type">{{item.TransType}}订单</text>
+        <!-- <text class="indent-time">20190915</text> -->
+        
+      </view>
+     <view>
+        <text class="index-lable">操作时间：</text>
+        <text class="index-content">{{item.OpDate}}</text>
+      </view>
+      <view>
+        <text class="index-lable">DN单号：</text>
+        <text class="index-content">{{item.DeliveryNumber}}</text>
+      </view>
+      <view>
+        <text class="index-lable">起始地：</text>
+        <text class="index-content">{{item.StartSite}}</text>
+      </view>
+      <view>
+        <text class="index-lable">目的地：</text>
+        <text class="index-content">{{item.EndSite}}</text>
+      </view>
+      <view>
+        <text class="index-lable">数量：</text>
+        <text class="index-content">{{item.PackageQty}}</text>
+      </view>
+    </view>
+    <view class="next-arrow-wrap">
+      <image class="next-arrow" src="./../../images/arrow.png"></image>
+    </view>
+  </view>
+
+</view>
+<!-- 入库订单 -->
+
+
+<view hidden="{{navItem !== 0}}">
+
+  <view class="indent"   wx:for="{{inList}}" wx:key="{{index}}" bindtap="toDetail" data-detail="{{item}}"  > 
+   <view  class="indent-item {{index%2 ?'white':'grey'  }}"  >
+    <!-- <view class="indent-goods-wrap">
+      <image class="indent-goods-img"></image>
+    </view> -->
+    <view class="indent-info">
+      <view class="">
+        <text class="indent-type">{{item.TransType}}订单</text>
+        <!-- <text class="indent-time">20190915</text> -->
+      </view>
+      <view>
+        <text class="index-lable">操作时间：</text>
+        <text class="index-content">{{item.OpDate}}</text>
+      </view>
+      <view>
+        <text class="index-lable">DN单号：</text>
+        <text class="index-content">{{item.DeliveryNumber}}</text>
+      </view>
+       <view>
+        <text class="index-lable">起始地：</text>
+        <text class="index-content">{{item.StartSite}}</text>
+      </view>
+      <view>
+        <text class="index-lable">目的地：</text>
+        <text class="index-content">{{item.EndSite}}</text>
+      </view>
+      <view>
+        <text class="index-lable">数量：</text>
+        <text class="index-content">{{item.PackageQty}}</text>
+      </view>
+    </view>
+    <view class="next-arrow-wrap">
+      <image class="next-arrow" src="./../../images/arrow.png"></image>
+    </view>
+  </view>
+
+  
+ </view>
+ 
+</view>
+
+
+<!-- 出库订单 -->
+
+
+ <view class="indent"   hidden="{{navItem !== 1}}" wx:for="{{outList}}" wx:key="{{index}}" bindtap="toDetail" data-detail="{{item}}" > 
+   <view  class="indent-item {{index%2 ?'white':'grey'  }}"  >
+    <!-- <view class="indent-goods-wrap">
+      <image class="indent-goods-img"></image>
+    </view> -->
+    <view class="indent-info">
+      <view class="">
+        <text class="indent-type">{{item.TransType}}订单</text>
+        <!-- <text class="indent-time">20190915</text> -->
+      </view>
+       <view>
+        <text class="index-lable">操作时间：</text>
+        <text class="index-content">{{item.OpDate}}</text>
+      </view>
+      <view>
+        <text class="index-lable">DN单号：</text>
+        <text class="index-content">{{item.DeliveryNumber}}</text>
+      </view>
+       <view>
+        <text class="index-lable">起始地：</text>
+        <text class="index-content">{{item.StartSite}}</text>
+      </view>
+      <view>
+        <text class="index-lable">目的地：</text>
+        <text class="index-content">{{item.EndSite}}</text>
+      </view>
+      <view>
+        <text class="index-lable">数量：</text>
+        <text class="index-content">{{item.PackageQty}}</text>
+      </view>
+    </view>
+    <view class="next-arrow-wrap">
+       <image class="next-arrow" src="./../../images/arrow.png"></image>
+    </view>
+  </view>
+
+</view>
+</view>

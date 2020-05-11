@@ -1,0 +1,35 @@
+/* components/nav/index.wxss */
+.container{
+  position: fixed;
+top:0;
+  width: 100%;
+  height: 148rpx;
+  background: #000000;
+  color: #fff;
+  z-index: 99
+}
+
+.back-icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.back-wrap{
+  position: absolute;
+  bottom:25rpx;
+  left: 35rpx;
+  display: flex;
+  align-items: center;
+ 
+}
+.backtitle{
+  font-size: 32rpx;
+}
+.title{
+  position: absolute;
+   top: 80rpx;
+   left: 50%;
+   transform: translateX(-50%);
+  text-align: center;
+  color: #ffff;
+  font-size: 32rpx;
+}

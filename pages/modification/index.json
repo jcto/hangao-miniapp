@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "v-nav": "../../components/nav/index",
+      "v-toast": "../../components/toast/toast"
+  }
+}

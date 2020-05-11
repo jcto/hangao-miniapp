@@ -1,0 +1,90 @@
+/* pagesB/removal/index.wxss */
+
+/* pagesA/removal/index.wxss */
+.container{
+  padding-top: 62rpx;
+}
+.scan{
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  
+}
+.banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.banner text{
+  margin-top: 22rpx;
+  margin-bottom: 33rpx;
+  font-size: 29rpx;
+  color: #e1000f;
+  
+  
+}
+
+.grey{
+  background: #f0f1f5;
+}
+.white{
+   background: #ffff;
+}
+.dn-number{
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+ 
+  padding: 16rpx 50rpx 10rpx 50rpx;
+  border-bottom: 1px solid #c8c8c8;
+}
+.dn-title{
+  color: #828c96;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+.two{
+  margin-left: 80rpx;
+}
+.dn-num{
+  font-size: 38rpx;
+  color: #828c96;
+}
+.green{
+  color: #4da77c !important;
+}
+.list{
+  box-sizing: border-box;
+  width: 100%;
+  height: 700rpx;
+  overflow-y: auto;
+
+  
+}
+.list-item{
+  box-sizing: border-box;
+ 
+  width: 100%;
+  padding: 40rpx 50rpx;
+ 
+  color: #313a3d;
+  font-size: 31rpx;
+      
+  border-bottom: 1px solid #c8c8c8;
+}
+.data-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#close{
+  font-size: 56rpx;
+  line-height: 29rpx; 
+
+}
+.tkDn{
+  display: flex;
+  align-items: center;
+}

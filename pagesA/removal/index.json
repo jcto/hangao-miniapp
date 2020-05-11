@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+   
+    "van-swipe-cell": "./../miniprogram_npm/dist/swipe-cell/index",
+    "van-cell": "./../miniprogram_npm/dist/cell/index",
+    "van-cell-group": "./../miniprogram_npm/dist/cell-group/index",
+    
+    "v-toast": "../../components/toast/toast",
+    "v-nav": "../../components/nav/index"
+    
+
+  }
+}

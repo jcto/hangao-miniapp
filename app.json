@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/help/index",
+    "pages/my/index",
+    "pages/histry/index",
+    "pages/waybill/index",
+    "pages/modification/index",
+    "pages/report/index"
+  ],
+  "subpackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "storage/index",
+        "removal/index",
+        "explain/index",
+        "storageList/index"
+      ]
+    },
+    {
+      "root": "pagesB",
+      "pages": [
+        "storageRemoval/index",
+        "explain/index",
+        "removal/index"
+      ]
+    },
+    {
+      "root": "pagesCheck",
+      "pages": [
+        "check/index",
+        "checkInit/checkInit"
+      ]
+    }
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

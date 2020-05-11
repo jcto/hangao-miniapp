@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "v-nav": "../../components/nav/index",
+      "van-picker": "./../miniprogram_npm/dist/picker/index",
+      "van-popup": "./../miniprogram_npm/dist/popup/index"
+  }
+}

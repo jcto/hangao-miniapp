@@ -1,0 +1,75 @@
+/* pagesB/explain/index.wxss */
+/* pagesA/explain/index.wxss */
+.container{
+  padding-top: 90rpx;
+}
+.title{
+  margin-bottom: 50rpx;
+  font-size: 26rpx;
+  color: #828c96;
+ padding-left: 112rpx;
+}
+.zhaopian{
+width: 91rpx;
+height: 91rpx;
+margin-bottom: 50rpx;
+
+}
+.upload-img{
+  position: relative;
+  
+}
+.zhaopian-wrap{
+  box-sizing: border-box;
+  padding:0 112rpx;
+}
+#cuo{
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  
+  width: 18rpx;
+  height: 18rpx;
+  padding: 10rpx;
+ 
+}
+/* .upload-img::after{
+  
+  background: url()
+} */
+.note{
+  color: #828c96;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+ 
+}
+.img-wrap{
+  display: inline-block;
+  width: 91rpx;
+  height: 91rpx;
+  margin-right: 25rpx;
+}
+
+.textarea{
+  width: 548rpx;
+  height: 220rpx;
+  margin: 0 auto;
+  
+  border: 1px solid #c8c8c8;
+  border-left: 5rpx solid #828c96;
+  padding-left: 35rpx;
+  padding-top: 25rpx;
+  font-size: 28rpx;
+  color: #313a3d;
+
+}
+.textarea-wrap{
+  position: relative;
+}
+.tips{
+  position: absolute;
+  right: 100rpx;
+  bottom: -44rpx;
+  font-size:22rpx;
+  color: red;
+}

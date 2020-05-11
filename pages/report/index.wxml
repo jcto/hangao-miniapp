@@ -1,0 +1,117 @@
+<!--pages/report01/index.wxml-->
+<v-nav title="跟踪报表" class="van-title" custom="true" bindgoPrev="goPrev" back="{{back}}" backFlag="false"></v-nav>
+
+
+
+<view class="tips" hidden="{{tips === ''}}">{{tips}}</view>
+<view class="nav margin-container">
+  <view class="nav-item">
+    <text class="item-text {{navItem === 0?'active-item':''}}" bindtap="chosenNavItem" data-key="0">在库</text>
+  </view>
+  <view class="nav-item">
+    <text class="item-text {{navItem === -1?'active-item ':''}}" bindtap="chosenNavItem" data-key="-1">在途</text>
+  </view>
+</view>
+
+
+<view class="histryList">
+  <view class="indent-list">
+    <!-- 在库 -->
+    <view>
+      <view class="table"  hidden="{{navItem !== 0}}" >
+        <view class="tr bg-w">
+          <view class="th">当前站点</view>
+          <view class="th">空桶数</view>
+          <view class="th ">满桶数</view>
+          <view class="th ">合计数</view>
+        </view>
+        <block wx:for="{{inList}}" wx:key="{{index}}">
+          <view class="tr {{index%2 ?'white':'grey'  }}">
+            <view class="td ">{{item.SiteName}}</view>
+            <view class="td">{{item.Empty}}</view>
+            <view class="td">{{item.Full}}</view>
+            <view class="td">{{item.Total}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- 在途  -->    
+    <view class="table" hidden="{{navItem !== -1}}" >
+      <view class="tr bg-w">
+        <view class="th">起始地</view>
+        <view class="th">目的地</view>
+        <view class="th ">在途数</view>
+        <!-- <view class="th ">超期数</view> -->
+      </view>
+      <block wx:for="{{outList}}" wx:key="{{index}}">
+        <view class="tr {{index%2 ?'white':'grey'  }}">
+          <view class="td ">{{item.StartSite}}</view>
+          <view class="td">{{item.EndSite}}</view>
+          <view class="td">{{item.TransitQty}}</view>
+          <!-- <view class="td">{{item.OverTimeQty}}</view> -->
+        </view>
+      </block>
+    </view>
+
+    
+  </view>
+  <view class='storage-info total-info' hidden="{{navItem !== 0}}">
+    <view class='total-item'>
+        <text class="total-item-title ">空桶数:</text>
+        <view class="text_right addBold">{{EmptyQty}}</view>
+    </view>
+    <view class="border-item"></view>
+     <view class='total-item'>
+        <text class="total-item-title ">满桶数:</text>
+        <view class="text_right addBold">{{FullQty}}</view>
+    </view>
+    <view class="border-item"></view>
+    <view class='total-item'>
+        <text class="total-item-title ">合计数:</text>
+        <view class="text_right addBold">{{TotalQty}}</view>
+    </view>
+     <view class="border-item"></view>
+      <view class='storage-item site-item'>
+        <text class="storage-item-title ">当前站点:</text>
+        <view class="text_right addBold" wx:if="{{!storeageIsOk}}"> 数据加载中,请稍后</view>
+        <view class="text_right addBold" bindtap="showNowplace" wx:if="{{storeageIsOk}}">{{nowPlaceTips}}</view>
+      </view>
+      <!-- <view class="btn" bindtap="searchInList">查询</view> -->
+  </view>
+  <view class='storage-info total-info' hidden="{{navItem !== -1}}">
+    <view class='total-item'>
+        <text class="total-item-title ">总在途数:</text>
+        <view class="text_right addBold">{{TransitQty}}</view>
+    </view>
+    <view class="border-item"></view>
+    <!-- <view class='total-item'>
+        <text class="total-item-title ">超期Tank数:</text>
+        <view class="text_right addBold">{{OverTimeQty}}</view>
+    </view> 
+    <view class="border-item"></view> -->
+    <view class='item-wrap'>
+      <view class='storage-item site-item'>
+        <text class="storage-item-title">起始地:</text>
+        <view class="text_right addBold" wx:if="{{!storeageIsOk}}"> 数据加载中,请稍后</view>
+        <view class="text_right addBold" bindtap="showStorage" wx:if="{{storeageIsOk}}">{{startPlaceTips}}</view>
+      </view>
+      <view class="border-item"></view>
+      <view class='storage-item site-item'>
+        <text class="storage-item-title ">目的地:</text>
+        <view class="text_right addBold" wx:if="{{!storeageIsOk}}"> 数据加载中,请稍后</view>
+        <view class="text_right addBold" bindtap="showendStorage" wx:if="{{storeageIsOk}}">{{endtPlaceTips}}</view>
+      </view>
+      <!-- <view class="btn" bindtap="searchOutList">查询</view> -->
+    </view>
+  </view>
+</view>
+
+<van-popup show="{{showPopupFlag}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+</van-popup>
+<van-popup show="{{endPopupFlag}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel" bind:confirm="onendConfirm" />
+</van-popup>
+<van-popup show="{{nowPopupFlag}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel" bind:confirm="onNowConfirm" />
+</van-popup>

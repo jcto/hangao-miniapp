@@ -1,0 +1,36 @@
+/* pages/help/index.wxss */
+
+.question-wrap{
+  
+  box-sizing: border-box;
+  width: 100%;
+  height: 100% ;
+  padding:  0 80rpx;
+  padding-top:10rpx;
+}
+.question-item{
+box-sizing: border-box;
+  width: 100%;
+  height: 100% ;
+}
+.question-item-title{
+  box-sizing: border-box;
+  margin-top:62rpx;
+ font-size: 32rpx;
+  font-family: "SourceHanSansCN";
+  color: rgb( 49, 58, 61 );
+  line-height: 45rpx;
+  margin-bottom: 18rpx;
+}
+
+
+.question-item-content{
+  line-height: 42rpx;
+  font-size: 30rpx;
+  color: rgb( 130, 140, 150 );
+  
+}
+.thumbnail{
+  margin-top: 20rpx;
+  width: 100%;
+}

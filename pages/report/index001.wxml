@@ -1,0 +1,153 @@
+<!--pages/report01/index.wxml-->
+<v-nav title="跟踪报表" class="van-title" custom="true" bindgoPrev="goPrev" back="{{back}}" backFlag="false"></v-nav>
+
+
+
+<view class="tips" hidden="{{tips === ''}}">{{tips}}</view>
+<view class="nav margin-container">
+  <view class="nav-item">
+    <text class="item-text {{navItem === -1?'active-item ':''}}" bindtap="chosenNavItem" data-key="-1">在途</text>
+  </view>
+  <view class="nav-item">
+    <text class="item-text {{navItem === 0?'active-item':''}}" bindtap="chosenNavItem" data-key="0">在库</text>
+  </view>
+</view>
+
+
+<view class="histryList">
+  <view class="indent-list">
+    <!-- 在途  -->
+    <view class="indent" hidden="{{navItem !== -1}}" wx:for="{{outList}}" wx:key="{{index}}" data-detail="{{item}}">
+      <view class="indent-item {{index%2 ?'white':'grey'  }}">
+        <view class="indent-info">
+          <view class="inden-item">
+            <view class="view-04 text-center">
+              <text class="index-lable">起始地</text>
+            </view>
+            <view class="view-02">
+              <image src='../../images/daoda01.png' class="icon-report"></image>
+            </view>
+            <view class="view-04 text-center">
+              <text class="index-lable">目的地</text>
+            </view>
+          </view>
+
+          <view class="inden-item">
+            <view class="view-04 text-center">
+              <text class="index-content bold-font">{{item.StartSite}}</text>
+            </view>
+            <view class="view-02">
+            </view>
+            <view class="view-04 text-center">
+              <text class="index-content bold-font">{{item.EndSite}}</text>
+            </view>
+          </view>
+          <view class="inden-item inden-flex">
+            <view class="view-flex">
+              <text class="index-lable">在途数</text>
+
+              <text class="index-content index-val">{{item.TransitQty}}</text>
+            </view>
+            <view class="view-flex">
+              <text class="index-lable">超期数</text>
+              <text class="index-content index-val">{{item.OverTimeQty}}</text>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 在库 -->
+    <view>
+      <view class="indent" wx:for="{{inList}}" wx:key="{{index}}" data-detail="{{item}}" hidden="{{navItem !== 0}}">
+        <view class="indent-item {{index%2 ?'white':'grey'  }}">
+          <view class="indent-info">
+            <view class="inden-item now-item">
+              <text class="index-lable">当前站点：</text>
+              <text class="index-content bold-font">{{item.SiteName}}</text>
+            </view>
+            <view class="inden-item inden-flex">
+              <view class="view-flex-3">
+                <text class="index-lable">空桶数</text>
+
+                <text class="index-content index-val">{{item.Empty}}</text>
+              </view>
+              <view class="view-flex-3">
+                <text class="index-lable">满桶数</text>
+                <text class="index-content index-val">{{item.Full}}</text>
+              </view>
+              <view class="view-flex-3">
+                <text class="index-lable">合计数</text>
+                <text class="index-content index-val">{{item.Total}}</text>
+              </view>
+
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='storage-info total-info' hidden="{{navItem !== -1}}">
+
+    <view class='total-item'>
+        <text class="total-item-title ">在途Tank数:</text>
+        <view class="text_right addBold">{{TransitQty}}</view>
+    </view>
+    <view class="border-item"></view>
+    <view class='total-item'>
+        <text class="total-item-title ">超期Tank数:</text>
+        <view class="text_right addBold">{{OverTimeQty}}</view>
+    </view>
+    <view class="border-item"></view>
+    <view class='item-wrap'>
+      <view class='storage-item'>
+        <text class="storage-item-title ">起始地:</text>
+        <view class="text_right addBold" wx:if="{{!storeageIsOk}}"> 数据加载中,请稍后</view>
+        <view class="text_right addBold" bindtap="showStorage" wx:if="{{storeageIsOk}}">{{startPlaceTips}}</view>
+      </view>
+      <view class="border-item"></view>
+      <view class='storage-item'>
+        <text class="storage-item-title ">目的地:</text>
+        <view class="text_right addBold" wx:if="{{!storeageIsOk}}"> 数据加载中,请稍后</view>
+        <view class="text_right addBold" bindtap="showendStorage" wx:if="{{storeageIsOk}}">{{endtPlaceTips}}</view>
+      </view>
+      <view class="btn">查询</view>
+    </view>
+  </view>
+
+  <view class='storage-info total-info' hidden="{{navItem !== 0}}">
+
+    <view class='total-item'>
+        <text class="total-item-title ">空桶数:</text>
+        <view class="text_right addBold">{{EmptyQty}}</view>
+    </view>
+    <view class="border-item"></view>
+     <view class='total-item'>
+        <text class="total-item-title ">满桶数:</text>
+        <view class="text_right addBold">{{FullQty}}</view>
+    </view>
+    <view class="border-item"></view>
+    <view class='total-item'>
+        <text class="total-item-title ">合计数:</text>
+        <view class="text_right addBold">{{TotalQty}}</view>
+    </view>
+     <view class="border-item"></view>
+      <view class='storage-item'>
+        <text class="storage-item-title ">当前站点:</text>
+        <view class="text_right addBold" wx:if="{{!storeageIsOk}}"> 数据加载中,请稍后</view>
+        <view class="text_right addBold" bindtap="showNowplace" wx:if="{{storeageIsOk}}">{{nowPlaceTips}}</view>
+      </view>
+      <view class="btn">查询</view>
+  </view>
+
+</view>
+
+<van-popup show="{{showPopupFlag}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+</van-popup>
+<van-popup show="{{endPopupFlag}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel" bind:confirm="onendConfirm" />
+</van-popup>
+<van-popup show="{{nowPopupFlag}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel" bind:confirm="onNowConfirm" />
+</van-popup>

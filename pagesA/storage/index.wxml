@@ -1,0 +1,102 @@
+<v-nav title="填写入库表单" back="{{back}}" backFlag="false" custom="true" bindgoPrev="goPrev"></v-nav>
+
+<view class='container '>
+
+  <form class='form margin-container'>
+    <van-cell-group>
+      <view class='item-wrap'>
+        <view class='user-tips' hidden='{{Tipsflag}}'>{{dnTips}}</view>
+        <van-field bind:change="changeDnNum" value="{{ DnNum  }}" use-button-slot type="number" border="{{ false }}" placeholder="请输入单号或扫码" bind:click-icon="onClickIcon" bind:blur="inputEnd">
+          <text slot="label" class='label'>DN单号:</text>
+          <view slot="button">
+            <image src='../../images/sao.png' class='scan' bindtap='scan'></image>
+          </view>
+        </van-field>
+      </view>
+      <view class='item-wrap'>
+        <view class='user-tips' hidden='{{totalflag}}'>{{totalTips}}</view>
+        <van-field bind:change="changeTotal" clearable type="number" bind:blur="totalInputEnd" placeholder="请输入货桶的数目" border="{{ false }}">
+          <text slot="label" class='label'>桶数:</text>
+        </van-field>
+      </view>
+
+
+
+
+    </van-cell-group>
+
+
+  </form>
+
+
+</view>
+
+<view class='storage-info'>
+
+  <view class='storage-item addBold' wx:if="{{DnInfoFlag}}">
+    <text class="storage-item-title">起始地:</text>
+    <text class="storage-item-des">{{StartSite}}</text>
+  </view>
+
+
+  <view class='storage-item' wx:if="{{!DnInfoFlag}}">
+
+    <text class="storage-item-title addBold">起始地:</text>
+    <view wx:if="{{!storeageIsOk}}"> 数据加载中,请稍后</view>
+
+    <view class="" bindtap="showStorage" wx:if="{{storeageIsOk}}">{{startPlaceTips}}</view>
+
+
+  </view>
+
+  <view class='storage-item'>
+    <text class="storage-item-title addBold">目的地:</text>
+    <view wx:if="{{!storeageIsOk}}"> 数据加载中,请稍后</view>
+    <view class="" bindtap="showendStorage" wx:if="{{storeageIsOk}}">{{endtPlaceTips}}</view>
+    <!-- <picker wx:if="{{formattingEnd.length}}" mode="multiSelector"  bindchange="bindEndPickerChange" bindcancel="endCancel"  bindcolumnchange="bindEndPickerColumnChange" value="{{multiIndexEnd}}" range="{{formattingEnd}}">
+      <view class="picker">
+        {{endtPlaceTips}}
+        {{formattingEnd[0][multiIndexEnd[0]]}}   {{formattingEnd[1][multiIndexEnd[1]]}} 
+      </view>
+    </picker> -->
+  </view>
+  <!-- <view class='storage-item endSite-item'>
+     
+     
+      <view class="section">
+        <view class="section__title">目的地:</view>
+       <text>{{endPlace}}</text>
+      </view>
+    </view> -->
+  <view class='storage-item'>
+    <text class="storage-item-title">出库时间:</text>
+    <text>{{OutStockDate}}</text>
+  </view>
+  <view class='storage-item'>
+    <text class="storage-item-title">总数量:</text>
+    <text>{{PackageQty}}</text>
+  </view>
+  <view class='storage-item'>
+    <text class="storage-item-title">运单数:</text>
+    <text>{{DocQty}}</text>
+  </view>
+
+
+</view>
+
+
+
+<view class='footer'>
+
+  <view class='footer-item home' bindtap='goBack'>返回首页</view>
+
+
+  <view class='footer-item next' bindtap="next">下一项</view>
+
+</view>
+<van-popup show="{{showPopupFlag}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+</van-popup>
+<van-popup show="{{endPopupFlag}}" bind:close="onClose" position="bottom">
+  <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel" bind:confirm="onendConfirm" />
+</van-popup>
