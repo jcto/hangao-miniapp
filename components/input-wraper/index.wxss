@@ -1,0 +1,12 @@
+.input-wraper {
+  border: 1 solid #666;
+  border-radius: 8rpx;
+  width: 640rpx;
+  height: 60rpx;
+}
+.input-wraper .left-icon {
+  display: inline-block;
+  height: 100%;
+  width: 40rpx;
+  background-color: red;
+}

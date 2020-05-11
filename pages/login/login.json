@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+      "footer":"../../components/footer/index",
       "van-field": "./../miniprogram_npm/dist/field/index",
       "van-cell-group":"./../miniprogram_npm/dist/cell-group/index",
       "van-checkbox": "./../miniprogram_npm/dist/checkbox/index"

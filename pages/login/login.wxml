@@ -16,6 +16,7 @@
       <van-field value="{{ password }}"   bind:change="changePassword" type="password" placeholder="请输入密码"  border="{{ false }}" error-message = "{{passwordErrMsg}}" >
          <text slot="label" class='label'>密码:</text>
       </van-field>
+
       <!-- <view class='user-tips'  hidden='passwordTips'>用户密码不能为空</view> -->
     </view>
     
@@ -36,6 +37,6 @@
   <image src='../../images/ball.png' class='ball' ></image>
     <view class="company serveNum">服务中心电话 400-856-0969</view>
   <text class="company">@汉高(中国)投资有限公司</text>
-
+      <footer></footer>
 </view>
  

@@ -1,0 +1,5 @@
+
+    <view class="input-wraper">
+        <view class="left-icon">test</view>
+        <slot></slot>
+    </view>

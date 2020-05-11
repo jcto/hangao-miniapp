@@ -1,0 +1,18 @@
+/* pages/test/index.wxss */
+.login-area{
+    background-color: #fff;
+    padding-top: 300rpx;
+}
+.login-area .logo{
+    display: block;
+    width: 300rpx;
+    height: 200rpx;
+    margin:0 auto;
+    border: 1rpx dashed #918888;
+}
+.title{
+    text-align: center;
+}
+.small{
+    font-size: 20rpx;
+}

@@ -1,0 +1,6 @@
+<view class='footer'>
+    <image class="footer-img" src='./imgs/Logo_red@2x.png' />
+    <text class="big-text" >汉高</text>
+    <text class="space-text" space="nbsp"> | </text>
+    <text class="small-text">可回收包装系统</text>
+</view>
