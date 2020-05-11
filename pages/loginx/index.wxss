@@ -10,7 +10,7 @@
     height: 50rpx;
     height: 200rpx;
     margin:0 auto;
-    border: 1rpx dashed #918888;
+    /* border: 1rpx dashed #918888; */
 }
 .title{
     text-align: center;
@@ -23,7 +23,9 @@
 .button-area{
     width: 686rpx;
     height: 160rpx;
+    box-sizing: border-box;
     background-color: #fff;
+    padding-top: 40rpx;
     margin-top: 40rpx;
     margin-left: auto;
     margin-right: auto;

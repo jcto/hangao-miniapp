@@ -1,0 +1,16 @@
+<view>
+    <view class="login-area">
+        <image class="logo" src="./imgs/Logo.png" />
+        <view class="title">
+            <text>汉高</text>
+            <text class="small">●</text>
+            <text>可回收管理</text>
+        </view>
+        <input-wraper  />
+        <input-wraper  />
+    </view>
+    <view class="button-area">
+        <van-button custom-style="height:70rpx;width:560rpx;border-radius:8rpx;" color="#B72729;" type="primary" block>登录</van-button>
+    </view>
+    <footer></footer>
+</view>

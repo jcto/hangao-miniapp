@@ -1,12 +1,20 @@
 .input-wraper {
-  border: 1 solid #666;
+  border-width: 2rpx;
+  border-style: solid;
+  border-color: #e2e2e2;
   border-radius: 8rpx;
-  width: 640rpx;
-  height: 60rpx;
+  display: flex;
+  width: 646rpx;
+  height: 74rpx;
+  margin:0rpx auto;
+  margin-bottom: 40rpx;
+}
+.input-wraper.nobottom{
+  margin-bottom: 0rpx;
 }
 .input-wraper .left-icon {
   display: inline-block;
   height: 100%;
-  width: 40rpx;
-  background-color: red;
+  width: 8rpx;
+  background-color:#B72729;
 }

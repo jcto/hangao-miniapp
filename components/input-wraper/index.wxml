@@ -1,5 +1,4 @@
-
-    <view class="input-wraper">
-        <view class="left-icon">test</view>
-        <slot></slot>
-    </view>
+<view class="input-wraper">
+    <view class="left-icon"></view>
+    <van-field label="账号:" custom-style="height:66rpx;width:636rpx;" title-width="100rpx" value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" />
+</view>
