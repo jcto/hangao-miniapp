@@ -1,0 +1,46 @@
+
+.inbound-area{
+    margin: 20rpx 32rpx 0 32rpx;
+    background-color: #fff;
+
+}
+.scan-area{
+    width: 100%;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+}
+.scan-area .scan-button{
+    margin: 0 auto;
+    width: 120rpx;
+    height: 120rpx;
+    display: block;
+}
+.scan-tip{
+    text-align: center;
+    color: #333;
+    font-size: 30rpx;
+}
+.button-box{
+    height: 70rpx;
+    width: 624rpx;
+    margin: 0 auto;
+}
+.to-home.van-button{
+    border: 4rpx solid #B72729;
+    box-sizing: border-box;
+    height: 70rpx;
+    margin-left: 0rpx;
+    width: 248rpx;
+    color: #333;
+}
+.next-step.van-button{
+    height: 70rpx;
+    margin-left: 127rpx;
+    width: 248rpx;
+}
+.scan-list{
+    border: 2rpx solid #e2e2e2;
+    width: 648rpx;
+    margin: 0 auto;
+
+}

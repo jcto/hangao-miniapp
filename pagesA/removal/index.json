@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "input-wraper": "../../components/input-wraper/index",
+    "sno-item": "../../components/sno-item/index",
+    "van-button": "@vant/weapp/button/index",
+    "footer": "./../../components/footer/index"
+  }
+}
