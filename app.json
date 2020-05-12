@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/storage/index",
+    "pagesA/storage/index",
 
     "pagesA/storageList/index",
 

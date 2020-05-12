@@ -5,6 +5,14 @@ Component({
       type: String,
       value: "账号:",
     },
+    isRightIcon:{
+      type:Boolean,
+      value:false
+    },
+    titleWidth:{
+      type:String,
+      value:'100rpx'
+    },
     required: {
       type: Boolean,
       value: true,
@@ -16,6 +24,10 @@ Component({
     placeholder:{
       type:String,
       value:''
+    },
+    readonly:{
+      type:Boolean,
+      value:false
     },
     value: {
       type: String,

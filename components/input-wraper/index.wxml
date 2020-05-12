@@ -6,10 +6,11 @@
     required="{{ required }}"
     clearable="{{ clearable }}"
     custom-style="height:90rpx;width:636rpx;"
-    title-width="100rpx"
+    title-width="{{titleWidth}}"
     value="{{ value }}"
     bind:input="value"
     bind:change="changeValue"
+    disabled="{{readonly}}"
     placeholder="{{placeholder}}"
     border="{{ false }}"
   ></van-field>

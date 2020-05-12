@@ -19,4 +19,9 @@
   border-radius: 8rpx 0 0 8rpx;
   background-color:#B72729;
 }
+.input-wraper .right-icon {
+  display: inline-block;
+  height: 100%;
+  width: 40rpx;
+}
 
