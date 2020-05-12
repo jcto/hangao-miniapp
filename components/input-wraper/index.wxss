@@ -5,7 +5,7 @@
   border-color: #e2e2e2;
   border-radius: 8rpx;
   display: flex;
-  width: 646rpx;
+  width: 648rpx;
   height: 94rpx;
   margin:0rpx auto;
 }
