@@ -1,0 +1,23 @@
+<view>
+  <van-grid gutter="{{ 10 }}" columnNum="{{ 2 }}">
+    <van-grid-item content-class="home-grid" wx:for="{{ 8 }}" use-slot>
+      <view>test</view>
+    </van-grid-item>
+  </van-grid>
+  <view class="home-grid">
+    <view class="home-grid-item">
+      <image class="backgrd" src="./imgs/home1@3x.png"></image>
+      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <view class="grid-title">标题</view>
+      <view class="grid-text">miaos</view>
+    </view>
+    <view class="home-grid-item">
+        <image class="backgrd" src="./imgs/home1@3x.png"></image>
+        <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+        <view class="grid-title">标题</view>
+        <view class="grid-text">miaos</view>
+      </view>
+  </view>
+
+  <view class="test home-grid"></view>
+</view>
