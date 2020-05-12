@@ -1,0 +1,7 @@
+<view class="user-cell">
+    <image class="cell-icon" src="{{imgUrl}}"></image>
+    <view class="user-cell-content">
+        <text class="cell-label"> {{label}} </text>
+        <text class="cell-value"> {{value}}</text>
+    </view>
+</view>
