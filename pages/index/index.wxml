@@ -1,76 +1,23 @@
-<v-nav title="可回收包装追溯系统">
+<!-- <v-nav title="可回收包装追溯系统">
   <image src='../../images/navlogo.png' slot="logo" class='logo'></image>
-</v-nav>
+</v-nav> -->
+<image class="home-banner" src="./imgs/indexBanner.jpg"></image>
 
-<view class="margin-container">
-  <view class="banner-wrap">
-      <!-- <image src='../../images/+.png' class='plus'></image> -->
-      <!-- <view class='number-wrap'>
-        <text class="help-tips">如需帮助，请拨打服务热线</text>
-        <text class='number'>400-123-1234</text>
-      </view> -->
-      <image src='../../images/indexBanner.jpg' class='banner'></image>
+<view class="home-grid">
+  <navigator url="../../pagesA/storage/index">
+    <view class="home-grid-item">
+      <image class="backgrd" src="./imgs/home1@3x.png"></image>
+      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <view class="grid-title">产品入库</view>
+      <view class="grid-text">Inbound</view>
+    </view>
+  </navigator>
+  <navigator  url='../../pagesB/storageRemoval/index'>
+  <view class="home-grid-item">
+    <image class="backgrd" src="./imgs/home1@3x.png"></image>
+    <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+    <view class="grid-title">产品出库</view>
+    <view class="grid-text">Outbound</view>
   </view>
-  <view class='container'>
-    <view class='item-wrap'>
-      <navigator  url='../../pagesA/storage/index'class='item item-left'>
-        <image src='../../images/storage.png' class="icon-storage"></image>
-        <view class="item-title-wrap">
-          <text class="item-title">入  库</text>
-          <text class="item-title item-title1">Inbound</text>
-        </view>
-      </navigator>
-      <navigator class='item' url='../../pagesB/storageRemoval/index' >
-       <image src='../../images/removal.png' class="icon-removal"></image>
-       <view class="item-title-wrap">
-          <text class="item-title">出  库</text>
-          <text class="item-title item-title1">Outbound</text>
-        </view>
-      </navigator>
-    </view>
-   <view class='item-wrap'>
-      <navigator class='item item-left' url='../../pagesCheck/checkInit/checkInit'>
-       <image src='../../images/check.png' class="icon-check icon-check1"></image>
-       <view class="item-title-wrap">
-          <text class="item-title">盘  点</text>
-          <text class="item-title item-title1">Count</text>
-        </view>
-      </navigator>
-      <navigator class='item' url="../histry/index" >
-       <image src='../../images/histry.png' class="icon-histry"></image>
-       <view class="item-title-wrap">
-          <text class="item-title">运单历史</text>
-          <text class="item-title item-title1">History</text>
-        </view>
-      </navigator>
-    </view>
-    <view class='item-wrap'>
-      <navigator url='../../pagesA/removal/index' class='item item-left'>
-       <image src='../../images/help.png' class="icon-help"></image>
-       <view class="item-title-wrap">
-          <text class="item-title">初始入库</text>
-        <text class="item-title item-title1">Initial</text>
-        </view>
-        
-      </navigator>
-      <navigator class='item' url="../my/index" >
-       <image src='../../images/my.png' class="icon-my"></image>
-       <view class="item-title-wrap">
-         <text class="item-title">个人中心</text>
-       <text class="item-title item-title1">Personal Center</text>
-        </view>
-       
-      </navigator>
-    </view>
-    <view class='item-wrap' id="TrackingReport_wrap" wx:if="{{TrackingReport_wrapShow}}">
-      <navigator url="../report/index" class='item'>
-        <image src='../../images/report.png' class="icon-report"></image>
-        <view class="item-title-wrap">
-          <text class="item-title">跟踪报表</text>
-          <text class="item-title item-title1">Tracking Report</text>
-        </view>
-       
-      </navigator>
-    </view>
-  </view>
+</navigator>
 </view>
