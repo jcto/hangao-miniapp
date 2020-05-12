@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-        "v-nav": "../../components/nav/index"
-     
+    "footer": "../../components/footer/index",
+
+    "van-button": "@vant/weapp/button/index"
   }
 }

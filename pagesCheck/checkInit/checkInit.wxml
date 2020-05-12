@@ -1,47 +1,13 @@
-<v-nav title="盘点" backFlag="true"   custom="true" bindgoPrev="goPrev" ></v-nav>
+<v-nav title="盘点" backFlag="true" custom="true" bindgoPrev="goPrev"></v-nav>
 
-<view class="btnWrap">
+<view class="page-container">
+  <view class="button-area">
+    <van-button custom-style="height:70rpx;width:560rpx;border-radius:8rpx;" color="#B72729;" type="primary" block
+      bindtap="formSubmit_phone">开始盘点</van-button>
+    <view class="gutter20"></view>
 
-  <navigator class="btn one-btn" url="./../check/index">开始盘点</navigator>
-  <view class="btn" bindtap="checkInit">结束盘点 </view>
-</view>
-<view class="mask" hidden="{{hideMessage}}" ></view>
-
-<view class="messageBox" hidden="{{hideMessage}}">
-<view class="ListMessage-title">盘点系统</view>
-  <view class="messageList">
-
-    <view class="day">{{day}}</view>
-    <view class="list">
-      <view wx:if="{{ResultTaking.length}}">
-        <view class="ListMessage-title">对比</view>
-          <view wx:for="{{ResultTaking}}"  wx:key="index">
-          {{item.MarkFlag}}
-          满： {{item.FullQty}}
-          空：{{item.EmptyQty}}
-          未知： {{item.UnknowQty}}
-          总计：{{item.TotalQty}}
-          </view>
-        </view>
-      <view wx:if="{{Profit.length}}">
-          <view class="ListMessage-title">盘盈</view>
-          <view wx:for="{{Profit}}"  wx:key="index">
-          <!-- 状态： {{item.PackageStatus}} -->
-          编号：{{item.CodeNo}}
-          </view>
-      </view>
-      <view  wx:if="{{Loss.length}}">
-        <view class="ListMessage-title">盘亏</view>
-        <view wx:for="{{Loss}}" wx:key="index">
-          <!-- 状态： {{item.PackageStatus}} -->
-          编号：{{item.CodeNo}}
-        </view>
-      </view>
-      
-      
-    </view>
+    <van-button custom-style="height:70rpx;width:560rpx;border-radius:8rpx;" color="#B72729;" type="primary" block
+      bindtap="formSubmit_phone">结束盘点</van-button>
   </view>
-  <view class="confirm-btn-wrap">
-  <view class="confirm-btn" bindtap="closeMessageBox">确定</view></view>
-  
+  <footer></footer>
 </view>
