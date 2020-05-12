@@ -1,18 +1,18 @@
 <view class="page-container">
   <view class="gutter20"></view>
 
-  <view class="inbound-area">
-    <view class="scan-area">
-      <image class="scan-button" src="./../imgs/scan.png"></image>
-      <view class="scan-tip">添加二维码</view>
-    </view>
-    <input-wraper
-      label="DN单号："
-      value="{{ phone }}"
-      required="{{ false }}"
-      readonly="{{ true }}"
-      titleWidth="220rpx"
-    ></input-wraper>
+  <view class="inbound-area pd20">
+    <view class="scan-wraper">
+      <input-wraper
+        label="DN单号："
+        value="{{ phone }}"
+        required="{{ false }}"
+        readonly="{{ true }}"
+        titleWidth="220rpx"
+      ></input-wraper
+      ><image class="right-icon" src="./../imgs/right-scan.png"></image
+    ></view>
+
     <view class="gutter20"></view>
     <input-wraper
       label="总桶数："
@@ -30,9 +30,7 @@
       titleWidth="220rpx"
     ></input-wraper>
     <view class="gutter20"></view>
-    <view class="scan-list">
-        
-    </view>
+    <view class="scan-list"> </view>
   </view>
   <view class="button-area">
     <view class="button-box">

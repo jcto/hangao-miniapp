@@ -4,6 +4,9 @@
     background-color: #fff;
 
 }
+.inbound-area.pd20{
+    padding-top: 40rpx;
+}
 .scan-area{
     width: 100%;
     padding-top: 40rpx;
@@ -37,4 +40,16 @@
     height: 70rpx;
     margin-left: 127rpx;
     width: 248rpx;
+}
+.scan-wraper{
+    position: relative;
+    width: 647rpx;
+    margin: 0 auto;
+}
+.scan-wraper .right-icon{
+    position: absolute;
+    height: 90rpx;
+    width: 90rpx;
+    top: 2rpx;
+    right: 0;
 }
