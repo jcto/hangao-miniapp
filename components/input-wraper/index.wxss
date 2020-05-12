@@ -1,20 +1,22 @@
 .input-wraper {
-  border-width: 2rpx;
+  box-sizing: border-box;
+  border-width: 1rpx;
   border-style: solid;
   border-color: #e2e2e2;
   border-radius: 8rpx;
   display: flex;
   width: 646rpx;
-  height: 74rpx;
+  height: 94rpx;
   margin:0rpx auto;
-  margin-bottom: 40rpx;
 }
-.input-wraper.nobottom{
+/* .input-wraper.nobottom{
   margin-bottom: 0rpx;
-}
+} */
 .input-wraper .left-icon {
   display: inline-block;
   height: 100%;
   width: 8rpx;
+  border-radius: 8rpx 0 0 8rpx;
   background-color:#B72729;
 }
+

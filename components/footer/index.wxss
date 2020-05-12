@@ -7,10 +7,11 @@
   bottom: 0rpx;
   font-size: 24rpx;
   display: flex;
-
+height: 100rpx;
   align-items: center;
 
   justify-content: center;
+  border-top: 2rpx solid #e2e2e2;
 }
 .footer .footer-img {
   display: inline-block;
