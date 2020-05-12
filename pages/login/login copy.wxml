@@ -1,0 +1,42 @@
+<view class='container'>
+  <image src='../../images/logo.png' class='logo'></image>
+  <text class='title'>汉高可回收包装管理</text>
+  <form class='form' bindsubmit="formSubmit_phone">
+   <van-cell-group>
+     <view class='item-wrap'>
+      <!-- <view class='user-tips' hidden='{{phoneTips}}'>用户名不能为空</view> -->
+      <van-field
+        value="{{phone}}" clearable bind:input="phone"  bind:change="changePhone"  error="{{errorPhone}}"  border="{{ false }}" placeholder="请输入账号" 
+      >
+        <text slot="label" class='label'>账号:</text>
+      </van-field>
+      </view>
+    <view class='item-wrap'>
+   
+      <van-field value="{{ password }}"   bind:change="changePassword" type="password" placeholder="请输入密码"  border="{{ false }}" error-message = "{{passwordErrMsg}}" >
+         <text slot="label" class='label'>密码:</text>
+      </van-field>
+
+      <!-- <view class='user-tips'  hidden='passwordTips'>用户密码不能为空</view> -->
+    </view>
+    
+    
+    
+    
+    </van-cell-group>
+    <button class="btn_login"  formType="submit">登录</button>
+    <!-- <view class='else-option'>
+      <view >
+       <van-checkbox  value="{{ checked }}"  checked-color="#e1000f" bind:change="onChange">记住我</van-checkbox>
+   
+      </view>
+      <view>忘记密码</view>
+    </view> -->
+  
+  </form>
+  <image src='../../images/ball.png' class='ball' ></image>
+    <view class="company serveNum">服务中心电话 400-856-0969</view>
+  <text class="company">@汉高(中国)投资有限公司</text>
+      <footer></footer>
+</view>
+ 
