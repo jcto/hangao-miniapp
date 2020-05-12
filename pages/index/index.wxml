@@ -25,7 +25,23 @@
       <image class="backgrd" src="./imgs/home1@3x.png"></image>
       <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
       <view class="grid-title">初始入库</view>
-      <view class="grid-text">Outbound</view>
+      <view class="grid-text">Initial</view>
+    </view>
+  </navigator>
+  <navigator url='../../pagesCheck/checkInit/checkInit'>
+    <view class="home-grid-item">
+      <image class="backgrd" src="./imgs/home1@3x.png"></image>
+      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <view class="grid-title">货物盘点</view>
+      <view class="grid-text">Count</view>
+    </view>
+  </navigator>
+  <navigator url='../../pagesCheck/check/index'>
+    <view class="home-grid-item">
+      <image class="backgrd" src="./imgs/home1@3x.png"></image>
+      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <view class="grid-title">初始入库</view>
+      <view class="grid-text">Initial</view>
     </view>
   </navigator>
 </view>

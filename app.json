@@ -13,6 +13,7 @@
       "root": "pagesA",
       "pages": [
         "storage/index",
+        "removal/index",
         "storageList/index"
       ]
     },
