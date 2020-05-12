@@ -2,14 +2,18 @@
 <view class="page-container">
   <view style="height: 100rpx;"></view>
   <view class="user-area">
-    <view class="user-cell">
+    <!-- <view class="user-cell">
       <image class="cell-icon" src="./imgs/u1.svg"></image>
       <view class="user-cell-content">
         <text class="cell-label">用户账号：</text>
         <text class="cell-value">水果</text>
       </view>
-    </view>
-    <view class="user-cell">
+    </view> -->
+    <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/u1.svg"></cell>
+    <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/u2.svg"></cell>
+    <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/u3.svg"></cell>
+    <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/u4.svg"></cell>
+    <!-- <view class="user-cell">
       <image class="cell-icon" src="./imgs/u2.svg"></image>
       <button class="user-cell-button" open-type="contact">
         <view class="user-cell-content">
@@ -30,10 +34,10 @@
       <view class="user-cell-content">
         <text class="cell-label"> 帮助中心 </text>
       </view>
-    </view>
+    </view> -->
   </view>
 </view>
-<v-nav
+<!-- <v-nav
   title="个人中心"
   back="{{ back }} "
   custom="true"
@@ -46,9 +50,9 @@
 </view>
 
 <image src="./imgs/u4.svg"></image>
-<van-cell value="内容" icon="./imgs/u4.svg" is-link> </van-cell>
+<van-cell value="内容" icon="./imgs/u4.svg" is-link> </van-cell> -->
 
-<button class="my-item contact" open-type="contact">
+<!-- <button class="my-item contact" open-type="contact">
   在线客服 上午9点~下午6点(点击对话)
 </button>
 <view class="my-item contact" bindtap="contact">热线电话 400-856-0969 </view>
@@ -57,7 +61,7 @@
 </navigator>
 <view class="btn-wrap">
   <view class="btn" bindtap="getOut">退出登录</view>
-</view>
+</view> -->
 
 <view class="button-area">
   <van-button

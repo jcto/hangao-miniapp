@@ -1,7 +1,12 @@
 {
   "usingComponents": {
-    "van-cell": "@vant/weapp/cell/index",
-  "van-cell-group": "@vant/weapp/cell-group/index",
+    "cell":"./../../components/cell/index",
+
     "van-button": "@vant/weapp/button/index"
-  }
+  },
+  "navigationBarTitleText":"个人中心",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
 }
