@@ -31,7 +31,9 @@
     ></input-wraper>
     <view class="gutter20"></view>
     <view class="scan-list">
-        
+        <sno-item sno="123456"></sno-item>
+        <sno-item sno="123456" custClass="no-bottom"></sno-item>
+        <!-- <sno-item sno="123456" bind:clear="onclear"></sno-item> -->
     </view>
   </view>
   <view class="button-area">

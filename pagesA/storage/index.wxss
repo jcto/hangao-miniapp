@@ -2,7 +2,10 @@
 .inbound-area{
     margin: 20rpx 32rpx 0 32rpx;
     background-color: #fff;
-
+}
+.info-area{
+    margin: 0 32rpx 0 32rpx;
+    background: #fff;
 }
 .inbound-area.pd20{
     padding-top: 40rpx;

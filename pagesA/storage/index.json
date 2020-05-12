@@ -1,7 +1,15 @@
 {
   "usingComponents": {
+    "cell":"./../../components/cell/index",
+    "site-cell":"./../../components/site-cell/index",
+
     "input-wraper": "../../components/input-wraper/index",
     "van-button": "@vant/weapp/button/index",
     "footer": "./../../components/footer/index"
-  }
+  },
+  "navigationBarTitleText":"入库",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
 }

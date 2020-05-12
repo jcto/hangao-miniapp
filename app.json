@@ -1,22 +1,19 @@
 {
   "pages": [
-    "pagesA/storage/index",
-
-    "pagesA/storageList/index",
-
     "pages/index/index",
+
+    "pagesB/storageRemoval/index",
+    "pagesB/removal/index",
     "pages/user/index",
+
     "pages/login/login"
-
-
   ],
   "subpackages": [
     {
-      "root": "pagesB",
+      "root": "pagesA",
       "pages": [
-        "storageRemoval/index",
-        "explain/index",
-        "removal/index"
+        "storage/index",
+        "storageList/index"
       ]
     },
     {
@@ -38,7 +35,7 @@
         "pagePath": "pages/index/index",
         "selectedIconPath":"./imgs/home.png",
         "iconPath":"./imgs/user.png",
-        "text": "首页"
+        "text": "首页/ Home"
       },
       {
         "pagePath": "pages/user/index",

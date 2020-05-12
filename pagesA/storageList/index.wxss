@@ -38,3 +38,9 @@
     margin-left: 127rpx;
     width: 248rpx;
 }
+.scan-list{
+    border: 2rpx solid #e2e2e2;
+    width: 648rpx;
+    margin: 0 auto;
+
+}

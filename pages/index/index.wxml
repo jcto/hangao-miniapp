@@ -12,12 +12,20 @@
       <view class="grid-text">Inbound</view>
     </view>
   </navigator>
-  <navigator  url='../../pagesB/storageRemoval/index'>
-  <view class="home-grid-item">
-    <image class="backgrd" src="./imgs/home1@3x.png"></image>
-    <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
-    <view class="grid-title">产品出库</view>
-    <view class="grid-text">Outbound</view>
-  </view>
-</navigator>
+  <navigator url='../../pagesB/storageRemoval/index'>
+    <view class="home-grid-item">
+      <image class="backgrd" src="./imgs/home1@3x.png"></image>
+      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <view class="grid-title">产品出库</view>
+      <view class="grid-text">Outbound</view>
+    </view>
+  </navigator>
+  <navigator url='../../pagesA/removal/index'>
+    <view class="home-grid-item">
+      <image class="backgrd" src="./imgs/home1@3x.png"></image>
+      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <view class="grid-title">初始入库</view>
+      <view class="grid-text">Outbound</view>
+    </view>
+  </navigator>
 </view>
