@@ -1,27 +1,16 @@
 {
   "pages": [
-    "pages/loginx/index",
-    "pages/test/index",
+    "pages/storage/index",
+
+    "pagesA/storageList/index",
 
     "pages/index/index",
-    "pages/login/login",
-    "pages/help/index",
-    "pages/my/index",
-    "pages/histry/index",
-    "pages/waybill/index",
-    "pages/modification/index",
-    "pages/report/index"
+    "pages/user/index",
+    "pages/login/login"
+
+
   ],
   "subpackages": [
-    {
-      "root": "pagesA",
-      "pages": [
-        "storage/index",
-        "removal/index",
-        "explain/index",
-        "storageList/index"
-      ]
-    },
     {
       "root": "pagesB",
       "pages": [
@@ -40,6 +29,24 @@
   ],
   "window": {
     "navigationStyle": "custom"
+  },
+  "tabBar":{
+    "color":"#000",
+    "selectedColor":"#B72729",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "selectedIconPath":"./imgs/home.png",
+        "iconPath":"./imgs/user.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "selectedIconPath":"./imgs/home.png",
+        "iconPath":"./imgs/user.png",
+        "text": "个人"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -43,3 +43,18 @@ page{
 .margin-container{
   margin-top: 148rpx;
 }
+
+
+.gutter20{
+  height: 40rpx;
+}
+.button-area{
+  width: 686rpx;
+  height: 160rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-top: 40rpx;
+  margin-top: 40rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
