@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-        "v-toast": "../../components/toast/toast",
-        "v-nav": "../../components/nav/index"
-  }
-}

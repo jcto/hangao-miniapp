@@ -1,48 +1,52 @@
-<v-nav title="入库TANK列表" backFlag="true"></v-nav>
-<v-toast isShow="{{isShow}}" content="订单数量与扫描数量不同,请返回 上一页修改桶数或继续扫码"></v-toast>
-<view class=" margin-container"></view>
-<view class="container">
-  <view class="banner">
-     <image src='../../images/sao.png' class='scan' bindtap='scan'></image>
-     <text>添加二维码</text>
-  </view>
-</view>
-<view class="dn-number">
-  <text class="dn-title">DN单号</text>
-  <text>{{DN}}</text>
-</view>
-<!-- <view class="dn-number tkDn">
-  <text class="dn-title">TK单号</text>
-  <input  bindblur="TKInputEnd" placeholder="请输入tk单号或扫描" ></input>
-</view> -->
-<view class="dn-number">
-  <view>
-    <text class="dn-title">总桶数</text>
-     <text class='dn-num'>{{total}}</text>
+<view class="page-container">
+  <view class="gutter20"></view>
 
-  </view >
-   <view class='two'>
-    <text class="dn-title">已扫码</text>
-     <text class='dn-num green'>{{list.length}}</text>
-
-  </view>
-</view>
-<view class='list'>
-
-  <view  wx:key="{{index}}" data-index="{{index}}"  wx:for="{{list}}">
-   <view class="list-item {{index%2 ?'white':'grey' }}" > 
-    <view class='data-item' >
-      <text>{{item}}</text>
-      <text id="close" bindtap="onClose"  data-index="{{index}}">×</text>
+  <view class="inbound-area">
+    <view class="scan-area">
+      <image class="scan-button" src="./../imgs/scan.png"></image>
+      <view class="scan-tip">添加二维码</view>
     </view>
+    <input-wraper
+      label="DN单号："
+      value="{{ phone }}"
+      required="{{ false }}"
+      readonly="{{ true }}"
+      titleWidth="220rpx"
+    ></input-wraper>
+    <view class="gutter20"></view>
+    <input-wraper
+      label="总桶数："
+      value="{{ phone }}"
+      required="{{ false }}"
+      readonly="{{ true }}"
+      titleWidth="220rpx"
+    ></input-wraper>
+    <view class="gutter20"></view>
+    <input-wraper
+      label="已扫码："
+      value="{{ phone }}"
+      required="{{ false }}"
+      readonly="{{ true }}"
+      titleWidth="220rpx"
+    ></input-wraper>
+    <view class="gutter20"></view>
+    <view class="scan-list">
+        
     </view>
-  </view >
-  
-</view>
-  
-<view class='footer'>
-
-  <view class='footer-item home' bindtap='goBack' >上一页</view>
-  <view class='footer-item next' bindtap="next">下一项</view>
-
+  </view>
+  <view class="button-area">
+    <view class="button-box">
+      <van-button
+        custom-class="to-home"
+        custom-style="color:#333"
+        plain
+        type="primary"
+        >上一页</van-button
+      >
+      <van-button custom-class="next-step" color="#B72729;" type="primary"
+        >下一页</van-button
+      >
+    </view>
+  </view>
+  <footer></footer>
 </view>

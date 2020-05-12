@@ -1,11 +1,7 @@
 {
   "usingComponents": {
-    "van-field": "./../miniprogram_npm/dist/field/index",
-    "van-cell-group": "./../miniprogram_npm/dist/cell-group/index",
-    "van-checkbox": "./../miniprogram_npm/dist/checkbox/index",
-    "van-picker": "./../miniprogram_npm/dist/picker/index",
-      "van-popup": "./../miniprogram_npm/dist/popup/index",
-  
-    "v-nav":"../../components/nav/index"
+    "input-wraper": "../../components/input-wraper/index",
+    "van-button": "@vant/weapp/button/index",
+    "footer": "./../../components/footer/index"
   }
 }
