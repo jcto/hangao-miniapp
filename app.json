@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-
+    "pages/histry/index",
     "pagesB/storageRemoval/index",
     "pagesB/removal/index",
     "pages/user/index",
@@ -26,8 +26,13 @@
     }
   ],
   "window": {
-    "navigationStyle": "custom"
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "测试小程序",
+    "navigationBarTextStyle":"white"
   },
+
+
   "tabBar":{
     "color":"#000",
     "selectedColor":"#B72729",
@@ -42,7 +47,7 @@
         "pagePath": "pages/user/index",
         "selectedIconPath":"./imgs/home.png",
         "iconPath":"./imgs/user.png",
-        "text": "个人"
+        "text": "个人/Personal"
       }
     ]
   },

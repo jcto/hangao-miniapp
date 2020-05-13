@@ -51,6 +51,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 1,
 			"list": [
@@ -66,6 +70,12 @@
 					"name": "出库订单",
 					"pathName": "pagesB/explain/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/report/index",
+					"pathName": "pages/report/index",
 					"scene": null
 				}
 			]
