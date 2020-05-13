@@ -1,24 +1,30 @@
 <view class="page-container">
-  <view class="gutter20"></view>
-
   <view class="inbound-area">
-    <view class="scan-area">
+    <view class="scan-area"  bindtap='scan'>
       <image class="scan-button" src="./../../imgs/scan.png"></image>
       <view class="scan-tip">添加二维码</view>
     </view>
-    <input-wraper label="已扫码：" value="{{ phone }}" required="{{ false }}" readonly="{{ true }}" titleWidth="220rpx">
+    <input-wraper label="已扫码：" value="{{ list.length }}" required="{{ false }}" readonly="{{ true }}" titleWidth="140rpx">
     </input-wraper>
     <view class="gutter20"></view>
     <view class="scan-list">
-      <sno-item sno="123456"></sno-item>
-      <sno-item sno="123456" custClass="no-bottom"></sno-item>
+      <view wx:key="key" wx:for="{{ list }}">
+        <sno-item
+          index="{{ index }}"
+          sno="{{ item }}"
+          bind:close="close"
+        ></sno-item>
+      </view>
+      <!-- <sno-item sno="123456"></sno-item>
+      <sno-item sno="123456" custClass="no-bottom"></sno-item> -->
       <!-- <sno-item sno="123456" bind:clear="onclear"></sno-item> -->
     </view>
   </view>
   <view class="button-area">
     <van-button custom-style="height:70rpx;width:560rpx;border-radius:8rpx;" color="#B72729;" type="primary" block
-      bindtap="formSubmit_phone">提交</van-button>
+      bindtap="formSubmit_phone"  bindtap="initPage">提交</van-button>
   </view>
   <footer>
   </footer>
+  <v-toast isShow="{{toastContent}}" content="{{toastContent}}" bindok="ok"  ></v-toast>
 </view>

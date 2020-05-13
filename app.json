@@ -26,10 +26,11 @@
     }
   ],
   "window": {
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "汉高可回收包装管理",
-    "navigationBarTextStyle":"white"
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "汉高可回收包装管理"
   },
 
 

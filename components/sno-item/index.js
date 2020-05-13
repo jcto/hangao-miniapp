@@ -6,7 +6,6 @@ Component({
   },
   methods: {
     onClose(e) {
-        debugger
       this.triggerEvent("close", e);
     },
   },

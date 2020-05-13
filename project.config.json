@@ -125,6 +125,13 @@
 					"id": -1,
 					"name": "pagesB/explain/index",
 					"pathName": "pagesB/explain/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesA/removal/index",
+					"pathName": "pagesA/removal/index",
 					"scene": null
 				}
 			]
