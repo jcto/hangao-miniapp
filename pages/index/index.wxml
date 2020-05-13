@@ -4,52 +4,53 @@
 <image class="home-banner" src="./imgs/indexBanner.jpg"></image>
 
 <view class="home-grid">
+  <view class="margin10"></view>
   <navigator url="../../pagesA/storage/index">
     <view class="home-grid-item">
-      <image class="backgrd" src="./imgs/home1@3x.png"></image>
-      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <image class="backgrd left" src="./imgs/home1@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i1@3x.png"></image>
       <view class="grid-title">产品入库</view>
       <view class="grid-text">Inbound</view>
     </view>
   </navigator>
   <navigator url='../../pagesB/storageRemoval/index'>
     <view class="home-grid-item">
-      <image class="backgrd" src="./imgs/home1@3x.png"></image>
-      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <image class="backgrd right" src="./imgs/home2@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i2@3x.png"></image>
       <view class="grid-title">产品出库</view>
       <view class="grid-text">Outbound</view>
     </view>
   </navigator>
   <navigator url='../../pagesA/removal/index'>
     <view class="home-grid-item">
-      <image class="backgrd" src="./imgs/home1@3x.png"></image>
-      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <image class="backgrd left" src="./imgs/home3@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i3@3x.png"></image>
       <view class="grid-title">初始入库</view>
       <view class="grid-text">Initial</view>
     </view>
   </navigator>
   <navigator url='../../pagesCheck/checkInit/checkInit'>
     <view class="home-grid-item">
-      <image class="backgrd" src="./imgs/home1@3x.png"></image>
-      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
+      <image class="backgrd right" src="./imgs/home4@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i4@3x.png"></image>
       <view class="grid-title">货物盘点</view>
       <view class="grid-text">Count</view>
     </view>
   </navigator>
   <navigator url='../../pagesCheck/check/index'>
     <view class="home-grid-item">
-      <image class="backgrd" src="./imgs/home1@3x.png"></image>
-      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
-      <view class="grid-title">初始入库</view>
-      <view class="grid-text">Initial</view>
+      <image class="backgrd left" src="./imgs/home5@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i5@3x.png"></image>
+      <view class="grid-title">跟踪报表</view>
+      <view class="grid-text">Tracking Report</view>
     </view>
   </navigator>
   <navigator url='../../pages/report/index'>
     <view class="home-grid-item">
-      <image class="backgrd" src="./imgs/home1@3x.png"></image>
-      <image class="grid-icon" src="./imgs/inbound@3x.png"></image>
-      <view class="grid-title">跟踪报表</view>
-      <view class="grid-text">Tracking Report</view>
+      <image class="backgrd right" src="./imgs/home6@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i6@3x.png"></image>
+      <view class="grid-title">历史运单</view>
+      <view class="grid-text">History</view>
     </view>
   </navigator>
 </view>
