@@ -132,6 +132,13 @@
 					"id": -1,
 					"name": "pagesA/removal/index",
 					"pathName": "pagesA/removal/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/report/index",
+					"pathName": "pages/report/index",
 					"scene": null
 				}
 			]

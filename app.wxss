@@ -48,6 +48,9 @@ page{
 .gutter20{
   height: 40rpx;
 }
+.gutter10{
+  height: 20rpx;
+}
 .button-area{
   width: 686rpx;
   height: 160rpx;

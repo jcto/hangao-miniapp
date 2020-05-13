@@ -37,7 +37,7 @@
       <view class="grid-text">Count</view>
     </view>
   </navigator>
-  <navigator url='../../pagesCheck/check/index'>
+  <navigator url='../../pages/report/index'>
     <view class="home-grid-item">
       <image class="backgrd left" src="./imgs/home5@3x.png"></image>
       <image class="grid-icon" src="./imgs/i5@3x.png"></image>
