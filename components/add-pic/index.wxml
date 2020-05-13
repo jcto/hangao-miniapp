@@ -1,0 +1,8 @@
+<view class="add-pic-area">
+  <view></view>
+  <view class="add-button">
+    <image class="addpic" src="./imgs/addpic.png"></image>
+    <view class="add-text">点击“＋”添加图片</view>
+  </view>
+  <image class="add-btn" src="./imgs/addbtn.png"></image>
+</view>

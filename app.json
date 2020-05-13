@@ -1,11 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/user/index",
     "pages/histry/index",
     "pagesB/storageRemoval/index",
     "pagesB/removal/index",
-    "pages/user/index",
-
     "pages/login/login"
   ],
   "subpackages": [
@@ -13,6 +12,7 @@
       "root": "pagesA",
       "pages": [
         "storage/index",
+        "explain/index",
         "removal/index",
         "storageList/index"
       ]
@@ -28,7 +28,7 @@
   "window": {
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "测试小程序",
+    "navigationBarTitleText": "汉高可回收包装管理",
     "navigationBarTextStyle":"white"
   },
 

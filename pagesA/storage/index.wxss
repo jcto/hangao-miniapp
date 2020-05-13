@@ -26,29 +26,6 @@
     color: #333;
     font-size: 30rpx;
 }
-.button-box{
-    height: 70rpx;
-    width: 624rpx;
-    margin: 0 auto;
-}
-.to-home.van-button{
-    border: 4rpx solid #B72729;
-    box-sizing: border-box;
-    height: 70rpx;
-    margin-left: 0rpx;
-    width: 248rpx;
-    color: #333;
-}
-.next-step.van-button{
-    height: 70rpx;
-    margin-left: 127rpx;
-    width: 248rpx;
-}
-.scan-wraper{
-    position: relative;
-    width: 647rpx;
-    margin: 0 auto;
-}
 .scan-wraper .right-icon{
     position: absolute;
     height: 90rpx;

@@ -26,7 +26,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
-	"appid": "wx833065cf71d612be",
+	"appid": "wx0d8884b4b1458dc8",
 	"projectname": "%E5%8F%AF%E5%9B%9E%E6%94%B6%E5%8C%85%E8%A3%85%E8%BF%BD%E6%BA%AF%E7%B3%BB%E7%BB%9F",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -76,6 +76,34 @@
 					"id": -1,
 					"name": "pages/report/index",
 					"pathName": "pages/report/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesA/storage/index",
+					"pathName": "pagesA/storage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesA/storageList/index",
+					"pathName": "pagesA/storageList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesA/explain/index",
+					"pathName": "pagesA/explain/index",
 					"scene": null
 				}
 			]

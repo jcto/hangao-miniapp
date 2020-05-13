@@ -1,0 +1,39 @@
+.add-pic-area {
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 100rpx;
+  width: 686rpx;
+  height: 500rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 40rpx;
+}
+.add-button {
+  box-sizing: border-box;
+  padding-top: 80rpx;
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto 0rpx;
+  border: 4rpx dashed #ccc;
+  /* border: 4rpx dotted #ccc; */
+}
+.addpic {
+  display: block;
+  height: 80rpx;
+  width: 100rpx;
+  margin: 0 auto;
+}
+.add-text {
+  text-align: center;
+  color: #999;
+  margin-top: 20rpx;
+}
+.add-pic-area .add-btn {
+  height: 56rpx;
+  width: 56rpx;
+  position: absolute;
+  display: block;
+  top: 20rpx;
+  left: 20rpx;
+  z-index: 10;
+}

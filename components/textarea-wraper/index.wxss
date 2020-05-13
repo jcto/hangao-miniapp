@@ -1,0 +1,40 @@
+.textarea-wraper {
+
+  box-sizing: border-box;
+  border-width: 1rpx;
+  border-style: solid;
+  border-color: #e2e2e2;
+  border-radius: 8rpx;
+  display: flex;
+  width: 648rpx;
+  height: 200rpx;
+  margin:0rpx auto;
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+/* .input-wraper.nobottom{
+  margin-bottom: 0rpx;
+} */
+.textarea-wraper .left-icon {
+  display: inline-block;
+  height: 100%;
+  width: 8rpx;
+  border-radius: 8rpx 0 0 8rpx;
+  background-color:#B72729;
+}
+.textarea-wraper .textarea{
+  padding: 20rpx;
+  height: 160rpx;
+}
+.textarea-box{
+  width: 686rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin:40rpx auto 0;
+  background-color: #fff;
+}
+.textarea-box .text{
+  font-size: 40rpx;
+  color: #333;
+}
+
