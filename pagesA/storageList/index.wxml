@@ -5,7 +5,7 @@
   ></v-toast>
   <view class="inbound-area">
     <view class="scan-area" bindtap="scan">
-      <image class="scan-button" src="./../imgs/scan.png"></image>
+      <image class="scan-button" src="./../../imgs/scan.png"></image>
       <view class="scan-tip">添加二维码</view>
     </view>
     <input-wraper

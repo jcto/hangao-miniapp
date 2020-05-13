@@ -3,7 +3,7 @@
 
   <view class="inbound-area">
     <view class="scan-area">
-      <image class="scan-button" src="./../imgs/scan.png"></image>
+      <image class="scan-button" src="./../../imgs/scan.png"></image>
       <view class="scan-tip">添加二维码</view>
     </view>
     <input-wraper label="已扫码：" value="{{ phone }}" required="{{ false }}" readonly="{{ true }}" titleWidth="220rpx">
