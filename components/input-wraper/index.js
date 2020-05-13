@@ -39,5 +39,9 @@ Component({
     changeValue(e) {
       this.triggerEvent("inputChange", e.detail);
     },
+    changeValue(e) {
+      this.triggerEvent("blur", e.detail);
+    },
+    
   },
 });

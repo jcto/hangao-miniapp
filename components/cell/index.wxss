@@ -27,10 +27,12 @@
   .cell-label {
     font-size: 30rpx;
     color: #333;
+    width: 100rpx;
   }
   .cell-value {
     font-size: 26rpx;
     color: #333;
+    flex: 1;
   }
   .cell-icon {
     height: 60rpx;

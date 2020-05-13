@@ -2,7 +2,8 @@
   "usingComponents": {
     "cell":"./../../components/cell/index",
     "site-cell":"./../../components/site-cell/index",
-
+    "van-popup": "@vant/weapp/popup/index",
+    "van-picker": "@vant/weapp/picker/index",
     "input-wraper": "../../components/input-wraper/index",
     "van-button": "@vant/weapp/button/index",
     "footer": "./../../components/footer/index"

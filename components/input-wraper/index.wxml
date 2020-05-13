@@ -9,6 +9,7 @@
     title-width="{{titleWidth}}"
     value="{{ value }}"
     bind:input="value"
+    bind:blur="onBlur"
     bind:change="changeValue"
     disabled="{{readonly}}"
     placeholder="{{placeholder}}"
