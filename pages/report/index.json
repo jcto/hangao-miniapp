@@ -1,7 +1,10 @@
 {
   "usingComponents": {
-      "v-nav": "../../components/nav/index",
-      "van-picker": "./../miniprogram_npm/dist/picker/index",
-      "van-popup": "./../miniprogram_npm/dist/popup/index"
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
   }
 }
