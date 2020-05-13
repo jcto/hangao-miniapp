@@ -1,4 +1,4 @@
-// pages/test/index.js
+// pages/my/index.js
 Page({
 
   /**
@@ -14,12 +14,30 @@ Page({
   onLoad: function (options) {
 
   },
+  // 拨号功能
+  contact(){
+
+    wx.makePhoneCall({
+      phoneNumber: '400-856-0969' //仅为示例，并非真实的电话号码
+    })
+  },
+  goPrev() {
+    wx.reLaunch({
+      url: './../../pages/index/index',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    let loginTime = wx.getStorageSync("loginTime");
+    let phone = wx.getStorageSync("user").phone;
+    console.log(phone)
+    this.setData({
+      loginTime,
+      phone
+    })
   },
 
   /**
@@ -62,5 +80,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getOut(){
+    wx.showLoading({
+      title: '退出中，请稍等',
+    })
+    // wx.removeStorageSync("token"),
+    //   wx.removeStorageSync("userSiteId"),
+    //   wx.removeStorageSync("inendID"),
+    //   wx.removeStorageSync("instartID"),
+    // wx.removeStorageSync("siteName"),
+    //   wx.removeStorageSync("inTotal"),
+    //   wx.removeStorageSync("OUTINFO"),
+    //   wx.removeStorageSync("inNumber"),
+    wx.clearStorage()
+    wx.redirectTo({
+      url: '../login/login',
+    })
   }
 })

@@ -2,3 +2,15 @@
   background-color: #fff;
   padding: 20rpx;
 }
+.contact-btn{
+  position: relative;
+}
+.contact-btn button{
+  opacity:0;
+  height: 79rpx;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: -30rpx;
+
+}

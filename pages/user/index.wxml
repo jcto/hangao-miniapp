@@ -1,75 +1,29 @@
 <!--pages/my/index.wxml-->
 <view class="page-container">
-  <view style="height: 100rpx;"></view>
   <view class="user-area">
-    <!-- <view class="user-cell">
-      <image class="cell-icon" src="./imgs/u1.svg"></image>
-      <view class="user-cell-content">
-        <text class="cell-label">用户账号：</text>
-        <text class="cell-value">水果</text>
-      </view>
-    </view> -->
-    <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/u1.svg"></cell>
-    <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/u2.svg"></cell>
-    <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/u3.svg"></cell>
-    <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/u4.svg"></cell>
-    <!-- <view class="user-cell">
-      <image class="cell-icon" src="./imgs/u2.svg"></image>
-      <button class="user-cell-button" open-type="contact">
-        <view class="user-cell-content">
-          <text class="cell-label">在线客服 </text>
-          <text class="cell-value">上午9点~下午6点(点击对话)</text>
-        </view>
-      </button>
+    <cell label="用户账号：" value="{{phone}}" imgUrl="./imgs/u1.svg"></cell>
+    <view class="contact-btn">
+      <cell
+        label="在线客服"
+        value="工作时间09~18点"
+        imgUrl="./imgs/u2.svg"
+      ></cell>
+      <button class="my-item contact" open-type="contact"></button>
     </view>
-    <view class="user-cell">
-      <image class="cell-icon" src="./imgs/u3.svg"></image>
-      <view class="user-cell-content">
-        <text class="cell-label"> 热线电话 </text>
-        <text class="cell-value"> 400-856-0969 </text>
-      </view>
-    </view>
-    <view class="user-cell">
-      <image class="cell-icon" src="./imgs/u4.svg"></image>
-      <view class="user-cell-content">
-        <text class="cell-label"> 帮助中心 </text>
-      </view>
-    </view> -->
+    <cell label="热线电话" bindtap="contact" value="400-856-0969" imgUrl="./imgs/u3.svg"></cell>
+    <navigator url="../help/index" class="my-item">
+      <cell label="帮助中心" value="" imgUrl="./imgs/u4.svg"></cell>
+    </navigator>
+
   </view>
 </view>
-<!-- <v-nav
-  title="个人中心"
-  back="{{ back }} "
-  custom="true"
-  bindgoPrev="goPrev"
-  backFlag="false"
-></v-nav>
-<view class="my-item margin-container">
-  <text class="Titile">用户账号：</text>
-  <text class="Content">{{ phone }}</text>
-</view>
-
-<image src="./imgs/u4.svg"></image>
-<van-cell value="内容" icon="./imgs/u4.svg" is-link> </van-cell> -->
-
-<!-- <button class="my-item contact" open-type="contact">
-  在线客服 上午9点~下午6点(点击对话)
-</button>
-<view class="my-item contact" bindtap="contact">热线电话 400-856-0969 </view>
-<navigator url="../help/index" class="my-item">
-  <text class="Titile">帮助中心 </text>
-</navigator>
-<view class="btn-wrap">
-  <view class="btn" bindtap="getOut">退出登录</view>
-</view> -->
-
 <view class="button-area">
   <van-button
     custom-style="height:70rpx;width:560rpx;border-radius:8rpx;"
     color="#B72729;"
     type="primary"
     block
-    bindtap="formSubmit_phone"
-    >登录</van-button
+    bindtap="getOut"
+    >退出登录</van-button
   >
 </view>
