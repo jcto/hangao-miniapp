@@ -1,0 +1,23 @@
+<view class="waybill-cell">
+  <view class="content">
+    <view class="type item">
+      {{type}}
+    </view>
+    <view class="op-time item">
+      <text class="label">操作时间</text><text class="value">{{ opTime }}</text>
+    </view>
+    <view class="dn-number item">
+      <text class="label">名称</text><text class="value">{{ dnNumber }}</text>
+    </view>
+    <view class="start-site item">
+      <text class="label">名称</text><text class="value">{{ sSite }}</text>
+    </view>
+    <view class="end=site item">
+      <text class="label">名称</text><text class="value">{{ eSite }}</text>
+    </view>
+    <view class="number item">
+      <text class="label">名称</text><text class="value">{{ number }}</text>
+    </view>
+  </view>
+  <van-icon name="arrow" size="20" color="#ccc"></van-icon>
+</view>

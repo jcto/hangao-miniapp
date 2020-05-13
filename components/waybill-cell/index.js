@@ -1,0 +1,10 @@
+Component({
+    properties:{
+        type:String,
+        opTime:String,
+        dnNumber:String,
+        sSite:String,
+        eSite:String,
+        number:String
+    }
+})
