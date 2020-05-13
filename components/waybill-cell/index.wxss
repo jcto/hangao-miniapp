@@ -24,6 +24,7 @@
     padding: 10rpx;
     padding-right: 5rpx;
 }
+.waybill-cell .content .item .label{display: inline-block;width: 150rpx;}
 .waybill-cell .content .type{
     color: #B72729;
 }

@@ -3,5 +3,7 @@
     "waybill-cell":"../../components/waybill-cell/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index"
-  }
+  },
+  "navigationBarTitleText":"历史订单"
+  
 }

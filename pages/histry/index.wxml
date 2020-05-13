@@ -1,19 +1,21 @@
 <view class="pages-container">
-  <view class="gutter20"></view>
-  <view class="gutter20"></view>
-  <view class="gutter20"></view>
   <van-tabs color="#B72729" sticky animated>
-    <van-tab title="全部 1">
-      <waybill-cell></waybill-cell>
+    <van-tab title="全部订单">
+      <waybill-cell item="{{item}}" wx:for="{{testallHistry}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
+      </waybill-cell>
+    </van-tab>
+    <van-tab title="入库订单">
+      <waybill-cell item="{{item}}" wx:for="{{testallHistry}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
+      </waybill-cell>
+
+      <!-- <waybill-cell></waybill-cell>
       <waybill-cell></waybill-cell
-    ></van-tab>
-    <van-tab title="入库 2">
-      <waybill-cell></waybill-cell>
-      <waybill-cell></waybill-cell
-    ></van-tab>
-    <van-tab title="出库 3">
-      <waybill-cell></waybill-cell>
-      <waybill-cell></waybill-cell
-    ></van-tab>
+    > -->
+    </van-tab>
+    <van-tab title="出库订单">
+      <waybill-cell item="{{item}}" wx:for="{{testallHistry}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
+      </waybill-cell>
+
+    </van-tab>
   </van-tabs>
 </view>

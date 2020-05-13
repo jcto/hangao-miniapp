@@ -1,5 +1,6 @@
 Component({
     properties:{
+        item:Object,
         type:String,
         opTime:String,
         dnNumber:String,

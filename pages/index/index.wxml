@@ -45,7 +45,7 @@
       <view class="grid-text">Tracking Report</view>
     </view>
   </navigator>
-  <navigator url='../../pages/report/index'>
+  <navigator url='../../pages/histry/index'>
     <view class="home-grid-item">
       <image class="backgrd right" src="./imgs/home6@3x.png"></image>
       <image class="grid-icon" src="./imgs/i6@3x.png"></image>
