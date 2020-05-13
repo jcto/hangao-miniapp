@@ -40,9 +40,9 @@ Page({
        });
        that.data.isLogin = false;
       setTimeout(()=>{
-        // wx.reLaunch({
-        //   url: '../login/login',
-        // })
+        wx.reLaunch({
+          url: '../login/login',
+        })
       },1200)
       
       }
@@ -72,7 +72,7 @@ Page({
    */
   onLoad: function (options) {
     
-    // this.isLoding();
+    this.isLoding();
     //this.getUserInfo();
    
   },
@@ -95,13 +95,13 @@ Page({
    */
   onReady: function () {
    // 判断用户者当前账号为 henkel01 才显示‘跟踪报表’
-    // LoginModules.getUserInfo().then(res => {
-    //   if (res.UserAccount ===  'henkel01'){
-    //     this.setData({
-    //       TrackingReport_wrapShow:true
-    //     })
-    //   }
-    // })
+    LoginModules.getUserInfo().then(res => {
+      if (res.UserAccount ===  'henkel01'){
+        this.setData({
+          TrackingReport_wrapShow:true
+        })
+      }
+    })
     
   },
 
@@ -114,7 +114,7 @@ Page({
   // 获取到用户信息 且 未登录不进行请求当前用户信息
     if (this.data.userSiteId) return
     if (!this.data.isLogin) return
-    // this.getUserInfo();
+    this.getUserInfo();
   },
 
   /**
