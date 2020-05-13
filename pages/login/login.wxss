@@ -22,5 +22,7 @@
 }
 
 .small{
-  font-size: 20rpx;
+  font-size: 15rpx;
+  position: relative;
+  top:-6rpx;
 }

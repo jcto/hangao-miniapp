@@ -1,9 +1,9 @@
 <view>
   <view class="login-area">
-    <image class="logo" src="./imgs/Logo.png"></image>
+    <image class="logo" src="./imgs/Logo@3x.png"></image>
     <view class="title">
       <text>汉高</text>
-      <text class="small">●</text>
+      <text class="small"> ● </text>
       <text>可回收管理</text>
     </view>
     <input-wraper label="账号：" bind:inputChange="changePhone" value="{{phone}}" placeholder="请输入账号"></input-wraper>
