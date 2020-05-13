@@ -13,7 +13,6 @@
         required="{{ false }}"
         titleWidth="140rpx"
       >
-      
       </input-wraper>
       <image
         class="right-icon"
@@ -29,10 +28,9 @@
     <input-wraper
       label="总桶数："
       bind:inputChange="changeTotal"
-      bind:blur="totalInputEnd"
+      bind:onBlur="totalInputEnd"
       type="number"
       placeholder="请输入货桶的数目"
-      value="{{ phone }}"
       required="{{ false }}"
       titleWidth="140rpx"
     >

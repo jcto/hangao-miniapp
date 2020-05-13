@@ -1,16 +1,15 @@
 <view class="page-container">
-  <view class="gutter20"></view>
-  <view class="gutter20"></view>
-
   <view class="inbound-area pd20">
     <view class="scan-wraper">
-      <input-wraper label="DN单号：" value="{{ phone }}" required="{{ false }}" readonly="{{ true }}" titleWidth="220rpx">
+      <input-wraper label="DN单号：" placeholder="请输入单号或扫码" bind:inputChange="changeDnNum" value="{{ DnNum }}"
+        required="{{ false }}" titleWidth="140rpx">
       </input-wraper>
-      <image class="right-icon" src="./../../imgs/right-scan.png"></image>
+      <image class="right-icon" bindtap="scan" src="./../../imgs/right-scan.png"></image>
     </view>
 
     <view class="gutter20"></view>
-    <input-wraper label="总桶数：" value="{{ phone }}" required="{{ false }}" readonly="{{ true }}" titleWidth="220rpx">
+    <input-wraper label="总桶数：" bind:inputChange="changeTotal" bind:onBlur="totalInputEnd" type="number"
+      placeholder="请输入货桶的数目" required="{{ false }}" titleWidth="140rpx">
     </input-wraper>
     <view class="gutter20"></view>
 
@@ -18,17 +17,26 @@
 
   <view class="info-area">
     <view class="site-area">
-      <site-cell label="用户账号：" value="龙工厂" imgUrl="./imgs/l1.png"></site-cell>
+      <site-cell bind:tapshowStart="showStorage" bind:tapshowEnd="showendStorage" startLabel="起始地：" endLabel="目的地："
+        startValue="{{ startPlaceTips }}" endValue="{{ endtPlaceTips }}" imgUrl="./imgs/l1.png"></site-cell>
     </view>
     <view class="scan-list">
-      <cell label="用户账号：" value="龙工厂" imgUrl="./imgs/l1.png"></cell>
+      <cell label="出库时间" value="{{time}}" imgUrl="./imgs/l1.png"></cell>
     </view>
   </view>
   <view class="button-area">
     <view class="button-box">
-      <van-button custom-class="to-home" custom-style="color:#333" plain type="primary">上一页</van-button>
-      <van-button custom-class="next-step" color="#B72729;" type="primary">下一页</van-button>
+      <van-button custom-class="to-home" custom-style="color:#333" plain type="primary" bindtap='goBack'>上一页</van-button>
+      <van-button custom-class="next-step" color="#B72729;" type="primary" bindtap="next" >下一页</van-button>
     </view>
   </view>
   <footer></footer>
+  <van-popup show="{{ showPopupFlag }}" bind:close="onClose" position="bottom">
+    <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel"
+      bind:confirm="onConfirm"></van-picker>
+  </van-popup>
+  <van-popup show="{{ endPopupFlag }}" bind:close="onClose" position="bottom">
+    <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel"
+      bind:confirm="onendConfirm"></van-picker>
+  </van-popup>
 </view>

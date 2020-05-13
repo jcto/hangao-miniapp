@@ -34,7 +34,7 @@
   background-color: #fff;
 }
 .textarea-box .text{
-  font-size: 40rpx;
+  font-size: 30rpx;
   color: #333;
 }
 

@@ -1,6 +1,6 @@
 /* pages/test/index.wxss */
 .home-banner{
-  height: 440rpx;
+  height: 360rpx;
   width: 100%;
   display: block;
 }

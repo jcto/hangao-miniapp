@@ -1,53 +1,33 @@
 <view class="page-container">
-  <view class="gutter20"></view>
+  <v-toast isShow="{{isShow}}" content="当前桶数不一致，如需修改桶数，请返回上一页"></v-toast>
 
   <view class="inbound-area">
-    <view class="scan-area">
+    <view class="scan-area" bindtap="scan">
       <image class="scan-button" src="./../../imgs/scan.png"></image>
       <view class="scan-tip">添加二维码</view>
     </view>
-    <input-wraper
-      label="DN单号："
-      value="{{ phone }}"
-      required="{{ false }}"
-      readonly="{{ true }}"
-      titleWidth="220rpx"
-    ></input-wraper>
+    <input-wraper label="DN单号：" value="{{ DN }}" required="{{ false }}" readonly="{{ true }}" titleWidth="140rpx">
+    </input-wraper>
     <view class="gutter20"></view>
-    <input-wraper
-      label="总桶数："
-      value="{{ phone }}"
-      required="{{ false }}"
-      readonly="{{ true }}"
-      titleWidth="220rpx"
-    ></input-wraper>
+    <input-wraper label="总桶数：" value="{{ total }}" required="{{ false }}" readonly="{{ true }}" titleWidth="140rpx">
+    </input-wraper>
     <view class="gutter20"></view>
-    <input-wraper
-      label="已扫码："
-      value="{{ phone }}"
-      required="{{ false }}"
-      readonly="{{ true }}"
-      titleWidth="220rpx"
-    ></input-wraper>
+    <input-wraper label="已扫码：" value="{{ list.length }}" required="{{ false }}" readonly="{{ true }}"
+      titleWidth="140rpx"></input-wraper>
     <view class="gutter20"></view>
     <view class="scan-list">
-        <sno-item sno="123456"></sno-item>
-        <sno-item sno="123456" custClass="no-bottom"></sno-item>
-        <!-- <sno-item sno="123456" bind:clear="onclear"></sno-item> -->
+      <view wx:key="key" wx:for="{{ list }}">
+        <sno-item index="{{ index }}" sno="{{ item }}" bind:close="close"></sno-item>
+      </view>
+      <!-- <sno-item sno="123456"></sno-item>
+        <sno-item sno="123456" custClass="no-bottom"></sno-item> -->
+      <!-- <sno-item sno="123456" bind:clear="onclear"></sno-item> -->
     </view>
   </view>
   <view class="button-area">
     <view class="button-box">
-      <van-button
-        custom-class="to-home"
-        custom-style="color:#333"
-        plain
-        type="primary"
-        >上一页</van-button
-      >
-      <van-button custom-class="next-step" color="#B72729;" type="primary"
-        >下一页</van-button
-      >
+      <van-button custom-class="to-home" custom-style="color:#333" plain type="primary"  bindtap='goBack' >上一页</van-button>
+      <van-button custom-class="next-step" color="#B72729;" type="primary"  bindtap='next' >下一页</van-button>
     </view>
   </view>
   <footer></footer>

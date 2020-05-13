@@ -7,5 +7,5 @@
     "van-image": "@vant/weapp/image/index",
     "footer": "./../../components/footer/index"
   },
-  "navigationBarTitleText": "入库说明"
+  "navigationBarTitleText": "出库说明"
 }

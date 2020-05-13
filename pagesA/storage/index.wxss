@@ -26,6 +26,11 @@
     color: #333;
     font-size: 30rpx;
 }
+.scan-wraper{
+    position: relative;
+    width: 647rpx;
+    margin: 0 auto;
+}
 .scan-wraper .right-icon{
     position: absolute;
     height: 90rpx;

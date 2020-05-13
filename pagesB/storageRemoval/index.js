@@ -191,6 +191,7 @@ Page({
 
   // 扫码
   scan() {
+    debugger
     let that = this;
     wx.scanCode({
       success: (res) => {

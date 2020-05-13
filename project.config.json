@@ -104,6 +104,27 @@
 					"id": -1,
 					"name": "pagesA/explain/index",
 					"pathName": "pagesA/explain/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesB/storageRemoval/index",
+					"pathName": "pagesB/storageRemoval/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesB/removal/index",
+					"pathName": "pagesB/removal/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesB/explain/index",
+					"pathName": "pagesB/explain/index",
 					"scene": null
 				}
 			]
