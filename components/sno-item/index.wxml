@@ -1,4 +1,4 @@
 <view class="sno-item {{custClass}}">
 <text>{{sno}}</text>
-<image class="clear-btn" src="./imgs/l1.png"></image>
+<image class="clear-btn"  id="close" bindtap="onClose"  data-index="{{index}}" src="./imgs/l1.png"></image>
 </view>

@@ -3,6 +3,7 @@
     "input-wraper": "../../components/input-wraper/index",
     "sno-item": "../../components/sno-item/index",
     "van-button": "@vant/weapp/button/index",
+    "v-toast": "../../components/toast/toast",
     "footer": "./../../components/footer/index"
   }
 }
