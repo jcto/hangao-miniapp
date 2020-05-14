@@ -6,6 +6,7 @@
 .info-area{
     margin: 0 32rpx 0 32rpx;
     background: #fff;
+    padding-bottom: 40rpx;
 }
 .inbound-area.pd20{
     padding-top: 40rpx;
