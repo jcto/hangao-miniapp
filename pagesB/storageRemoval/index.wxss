@@ -57,3 +57,6 @@
     top: 2rpx;
     right: 0;
 }
+.scan-list{
+    padding-top: 20rpx;
+}

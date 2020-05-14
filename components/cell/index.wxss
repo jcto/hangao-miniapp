@@ -36,8 +36,8 @@
   }
   .cell-icon {
     height: 60rpx;
-    width: 60rpx;
-    margin-right: 10rpx;
+    width: 67rpx;
+    /* margin-right: 10rpx; */
     margin-top: -10rpx;
   }
   

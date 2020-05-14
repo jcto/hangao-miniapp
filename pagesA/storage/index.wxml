@@ -83,7 +83,8 @@
     </view>
   </view>
   <footer></footer>
-  <van-popup show="{{ showPopupFlag }}" bind:close="onClose" position="bottom">
+  <van-popup show="{{ showPopupFlag }}"  bind:close="onClose" position="bottom">
+    <view class="ser-tel">如无对应站点请拨打400-856-0969</view>
     <van-picker
       columns="{{ columns }}"
       bind:change="onChange"
@@ -93,6 +94,7 @@
     ></van-picker>
   </van-popup>
   <van-popup show="{{ endPopupFlag }}" bind:close="onClose" position="bottom">
+    <view class="ser-tel">如无对应站点请拨打400-856-0969</view>
     <van-picker
       columns="{{ columns }}"
       bind:change="onChange"

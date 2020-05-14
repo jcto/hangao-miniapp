@@ -79,3 +79,9 @@ page{
   margin-left: 127rpx;
   width: 248rpx;
 }
+
+.ser-tel{
+  color: #666;
+  text-align: center;
+  font-size: 24rpx;
+}

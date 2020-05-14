@@ -10,7 +10,7 @@
     <input-wraper label="已扫码：" value="{{ list.length }}" required="{{ false }}" readonly="{{ true }}"
       titleWidth="140rpx"></input-wraper>
     <view class="gutter20"></view>
-    <view class="scan-list">
+    <view class="scan-list" wx:if="{{list.length}}">
       <view wx:key="key" wx:for="{{ list }}">
         <sno-item index="{{ index }}" sno="{{ item }}" bind:close="close"></sno-item>
       </view>

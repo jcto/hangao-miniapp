@@ -16,14 +16,14 @@
   .start-cell-content {
     border-bottom: 2rpx solid #e2e2e2;
     width: 100%;
-    height: 72rpx;
-    line-height: 72rpx;
+    height: 90rpx;
+    line-height: 90rpx;
   }
   .end-cell-content {
     border-bottom: 2rpx solid #e2e2e2;
     width: 100%;
-    height: 72rpx;
-    line-height: 72rpx;
+    height: 90rpx;
+    line-height: 90rpx;
   }
   button.user-cell-button {
     background: none;
@@ -46,12 +46,12 @@
     color: #333;
   }
   .cell-icon {
-    height: 130rpx;
-    width: 44rpx;
+    height: 121rpx;
+    width: 46rpx;
     display: block;
-    margin-left: 6rpx;
-margin-right: 14rpx;
-margin-top: 8rpx;
+    margin-left: 10rpx;
+    margin-right: 5rpx;
+    margin-top: 33rpx;
 
     /* margin-right: 10rpx;
     margin-top: -10rpx; */
