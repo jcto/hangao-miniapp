@@ -4,7 +4,8 @@ Component({
     endLabel: String,
     startValue: String,
     endValue: String,
-    imgUrl: String,
+    imgUrl: {type:String,
+    value:'./../../imgs/site.png'},
     type: String, // 简化的定义方式
   },
   methods: {
