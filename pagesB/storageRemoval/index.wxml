@@ -18,7 +18,7 @@
   <view class="info-area">
     <view class="site-area">
       <site-cell bind:tapshowStart="showStorage" bind:tapshowEnd="showendStorage" startLabel="起始地：" endLabel="目的地："
-        startValue="{{ startPlaceTips }}" endValue="{{ endtPlaceTips }}" imgUrl="./imgs/l1.png"></site-cell>
+        startValue="{{ startPlaceTips }}" endValue="{{ endtPlaceTips }}"></site-cell>
     </view>
     <view class="scan-list">
       <cell label="出库时间" value="{{time}}" imgUrl="./imgs/l1.png"></cell>
@@ -32,11 +32,11 @@
   </view>
   <footer></footer>
   <van-popup show="{{ showPopupFlag }}" bind:close="onClose" position="bottom">
-    <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel"
+    <van-picker columns="{{ columns }}" toolbar-class="pick-ok-color" bind:change="onChange" show-toolbar bind:cancel="onCancel"
       bind:confirm="onConfirm"></van-picker>
   </van-popup>
   <van-popup show="{{ endPopupFlag }}" bind:close="onClose" position="bottom">
-    <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar bind:cancel="onCancel"
+    <van-picker columns="{{ columns }}" toolbar-class="pick-ok-color" bind:change="onChange" show-toolbar bind:cancel="onCancel"
       bind:confirm="onendConfirm"></van-picker>
   </van-popup>
 </view>

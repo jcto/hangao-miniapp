@@ -47,7 +47,6 @@
         endLabel="目的地："
         startValue="{{ startPlaceTips }}"
         endValue="{{ endtPlaceTips }}"
-        imgUrl="./imgs/l1.png"
       ></site-cell>
     </view>
     <view class="scan-list">
