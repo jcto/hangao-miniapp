@@ -3,5 +3,7 @@
     "footer": "../../components/footer/index",
 
     "van-button": "@vant/weapp/button/index"
-  }
+  },
+  "navigationBarTitleText":"盘点"
+
 }

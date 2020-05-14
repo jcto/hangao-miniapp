@@ -1,15 +1,68 @@
-<v-nav title="盘点" backFlag="true" custom="true" bindgoPrev="goPrev"></v-nav>
-
 <view class="page-container">
-  <view class="button-area check">
+  <view wx:if="{{ hideMessage }}" class="button-area check">
     <navigator url="./../check/index">
-      <van-button custom-style="height:70rpx;width:560rpx;border-radius:8rpx;" color="#B72729;" type="primary" block
-        bindtap="formSubmit_phone">开始盘点</van-button>
+      <van-button
+        custom-style="height:70rpx;width:560rpx;border-radius:8rpx;"
+        color="#B72729;"
+        type="primary"
+        block
+        >开始盘点</van-button
+      >
     </navigator>
     <view class="gutter20"></view>
 
-    <van-button custom-style="height:70rpx;width:560rpx;border-radius:8rpx;" color="#B72729;" type="primary" block
-      bindtap="formSubmit_phone">结束盘点</van-button>
+    <van-button
+      custom-style="height:70rpx;width:560rpx;border-radius:8rpx;"
+      color="#B72729;"
+      type="primary"
+      block
+      bindtap="checkInit"
+      >结束盘点</van-button
+    >
+  </view>
+  <view wx:if="{{ !hideMessage }}">
+    <view class="section">
+      <view class="th">盘点系统</view>
+      <view class="tr">盘点日期：{{ day }}</view>
+      <view wx:if="{{ ResultTaking.length }}">
+        <view class="tr" wx:for="{{ ResultTaking }}" wx:key="index">
+          <text class="td"> {{ item.MarkFlag }}</text>
+          <text class="td">满: {{ item.FullQty }}</text>
+          <text class="td">空: {{ item.EmptyQty }}</text>
+          <text class="td">未知: {{ item.UnknowQty }}</text>
+          <text class="td">总计: {{ item.TotalQty }}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{ Profit.length }}" class="gutter20"></view>
+    <view wx:if="{{ Profit.length }}" class="section">
+      <view class="th">盘盈</view>
+      <view class="t-box">
+        <view class="tr" wx:for="{{ Profit }}" wx:key="index"
+          >编号：{{ item.CodeNo }}</view
+        >
+      </view>
+    </view>
+    <view wx:if="{{ Loss.length }}" class="gutter20"></view>
+
+    <view wx:if="{{ Loss.length }}" class="section">
+      <view class="th">盘亏</view>
+      <view class="t-box">
+        <view class="tr" wx:for="{{ Profit }}" wx:key="index"
+          >编号：{{ item.CodeNo }}</view
+        >
+      </view>
+    </view>
+    <view class="button-area">
+      <van-button
+        custom-style="height:70rpx;width:560rpx;border-radius:8rpx;"
+        color="#B72729;"
+        type="primary"
+        block
+        bindtap="closeMessageBox"
+        >确定</van-button
+      >
+    </view>
   </view>
   <footer></footer>
 </view>
