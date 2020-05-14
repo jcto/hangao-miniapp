@@ -8,8 +8,8 @@ Page({
   data: {
     navItem:-1, //控制导航栏高亮
     tips:"数据加载中",
-    testallHistry:[{TransType:'出库',DeliveryNumber:123,OpDate:"2019 4 20"},
-    {TransType:'入库',DeliveryNumber:456,OpDate:"2019 4 20"}],
+    // testallHistry:[{TransType:'出库',DeliveryNumber:123,OpDate:"2019 4 20"},
+    // {TransType:'入库',DeliveryNumber:456,OpDate:"2019 4 20"}],
     allHistry:[],//所有记录,
    
     

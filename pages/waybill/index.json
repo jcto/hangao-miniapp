@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "waybill-cell": "../../components/waybill-cell/index"
+    "waybill-cell": "../../components/waybill-cell/index",
+    "van-image": "@vant/weapp/image/index"
+
   },
   "navigationBarTitleText": "运单详情"
 

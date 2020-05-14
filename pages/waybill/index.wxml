@@ -2,23 +2,34 @@
 
 <waybill-cell item="{{ histry }}" isDetail="{{ true }}"></waybill-cell>
 
-<view class="waybill margin-container">
-  <view class="way-item cargo">
-    <view class="num"> 货物编号： </view>
-    <view class="cargo-num">
-      <text class="cargo-num-code" wx:for="{{ detail.Codes }}">{{ item }}</text>
-    </view>
+<view class="gutter20"></view>
+
+<!-- 货物编号 -->
+<view class="section">
+  <view class="th">货物编号：</view>
+  <view class="t-box">
+    <view class="tr" wx:for="{{ detail.Codes }}" wx:key="index"
+      >编号：{{ item }}</view
+    >
   </view>
 </view>
+<view class="gutter20" wx:if="{{ detail.Urls.length }}"></view>
 
-<view
-  class="way-item cargoImg"
-  wx:if="{{ detail.Urls.length }}"
-  wx:key="{{ index }}"
->
-  <image src="{{ item }}" wx:for="{{ detail.Urls }}"></image>
+<view class="section" wx:if="{{ detail.Urls.length }}">
+  <van-image
+    src="{{ item }}"
+    wx:for="{{ detail.Urls }}"
+    width="120rpx"
+    height="120rpx"
+  >
+  </van-image>
 </view>
-<view class="way-item note" wx:if="{{ histry.Memo }}">
-  <view class="note-title">备注</view>
-  <view class="note-content">{{ histry.Memo }}</view>
+
+<view class="gutter20" wx:if="{{ histry.Memo }}"></view>
+
+<view class="section" wx:if="{{ histry.Memo }}">
+  <view class="th">备注</view>
+  <view class="t-box">
+    <view class="tr"> {{ histry.Memo }}</view>
+  </view>
 </view>

@@ -26,7 +26,7 @@
     }
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#f8f8f8",
     "navigationBarTextStyle": "black",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
@@ -41,12 +41,12 @@
       {
         "pagePath": "pages/index/index",
         "selectedIconPath":"./imgs/home.png",
-        "iconPath":"./imgs/user.png",
+        "iconPath":"./imgs/home2.png",
         "text": "首页/ Home"
       },
       {
         "pagePath": "pages/user/index",
-        "selectedIconPath":"./imgs/home.png",
+        "selectedIconPath":"./imgs/user2.png",
         "iconPath":"./imgs/user.png",
         "text": "个人/Personal"
       }

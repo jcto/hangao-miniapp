@@ -1,11 +1,11 @@
 <view class="pages-container">
   <van-tabs color="#B72729" sticky animated>
     <van-tab title="全部订单">
-      <waybill-cell item="{{item}}" wx:for="{{testallHistry}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
+      <waybill-cell item="{{item}}" wx:for="{{allHistry}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
       </waybill-cell>
     </van-tab>
     <van-tab title="入库订单">
-      <waybill-cell item="{{item}}" wx:for="{{testallHistry}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
+      <waybill-cell item="{{item}}" wx:for="{{inList}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
       </waybill-cell>
 
       <!-- <waybill-cell></waybill-cell>
@@ -13,7 +13,7 @@
     > -->
     </van-tab>
     <van-tab title="出库订单">
-      <waybill-cell item="{{item}}" wx:for="{{testallHistry}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
+      <waybill-cell item="{{item}}" wx:for="{{outList}}" wx:key="index" bindtap="toDetail" data-detail="{{item}}">
       </waybill-cell>
 
     </van-tab>
