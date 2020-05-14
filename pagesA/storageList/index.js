@@ -129,7 +129,6 @@ Page({
   },
    // chn新增加的方法
    close(e){
-    debugger
     this.onClose(e.detail)
   },
   // 下一页

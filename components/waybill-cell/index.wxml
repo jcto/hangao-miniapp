@@ -1,6 +1,6 @@
 <view class="waybill-cell">
   <view class="content">
-    <view class="type item">
+    <view class="type item"  wx:if="{{!isDetail}}" >
       {{item.TransType}}订单
     </view>
     <view class="op-time item">
@@ -19,5 +19,5 @@
       <text class="label">数  量：</text><text class="value">{{ item.PackageQty }}</text>
     </view>
   </view>
-  <van-icon name="arrow" size="20" color="#ccc"></van-icon>
+  <van-icon name="arrow" size="20" color="#ccc" wx:if="{{!isDetail}}" ></van-icon>
 </view>

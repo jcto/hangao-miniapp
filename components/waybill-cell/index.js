@@ -6,6 +6,10 @@ Component({
         dnNumber:String,
         sSite:String,
         eSite:String,
-        number:String
+        number:String,
+        isDetail:{
+            type:Boolean,
+            value:false
+        }
     }
 })

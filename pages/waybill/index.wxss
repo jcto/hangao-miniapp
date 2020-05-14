@@ -1,0 +1,96 @@
+/* pages/waybill/index.wxss */
+
+.way-item{
+    box-sizing: border-box;
+    width: 100%;
+  
+    padding-left: 80rpx;
+    border-bottom: 1rpx solid #c8c8c8;
+  }
+  .indent-info{
+      height: 232rpx;
+      padding: 22rpx 80rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+  }
+  .indent-info view{
+    height: 40rpx;
+    line-height: 40rpx;
+  }
+  
+  .indent-type{
+     font-size: 30rpx;
+    
+    color: rgb(225, 0, 15);
+  
+  
+  }
+  .indent-time{
+     font-size: 28rpx;
+     color: rgb(49, 58, 61);
+    margin-left: 10rpx;
+  
+  }
+  .index-lable{
+     font-size: 28rpx;
+  
+    color: #828c96;
+  
+  
+  }
+  .index-content{
+    font-size: 26rpx;
+    color: #313a3d;
+  }
+  
+  .num{
+  font-size: 28rpx;
+  color: rgb(130, 140, 150);
+  line-height: 40rpx;
+  }
+  .cargo-num{
+    
+    display:block ;
+  overflow-wrap: break-word;
+    font-size: 28rpx;
+    color: #313a3d;
+    line-height: 40rpx;
+  
+  }
+  
+  
+  .cargo{
+    padding-top: 33rpx;
+    padding-bottom: 50rpx;
+    
+  }
+  .cargoImg{
+    padding: 56rpx 80rpx;
+  }
+  
+  .cargoImg image{
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 10rpx;
+   
+    margin-right: 28rpx;
+  
+  }
+  .note{
+    border: none;
+    padding-top: 30rpx;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: #828c96;
+  }
+  .note-content{
+    color: #313a3d;
+     font-size: 28rpx;
+    line-height: 40rpx;
+  }
+  .cargo-num-code{
+    display: inline-block;
+    width: 20%;
+  }
+  

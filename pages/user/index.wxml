@@ -1,18 +1,18 @@
 <!--pages/my/index.wxml-->
 <view class="page-container">
   <view class="user-area">
-    <cell label="用户账号：" value="{{phone}}" imgUrl="./imgs/u1.svg"></cell>
+    <cell label="用户账号：" value="{{phone}}" imgUrl="./imgs/u1.png"></cell>
     <view class="contact-btn">
       <cell
         label="在线客服"
         value="工作时间09~18点"
-        imgUrl="./imgs/u2.svg"
+        imgUrl="./imgs/u2.png"
       ></cell>
       <button class="my-item contact" open-type="contact"></button>
     </view>
-    <cell label="热线电话" bindtap="contact" value="400-856-0969" imgUrl="./imgs/u3.svg"></cell>
+    <cell label="热线电话" bindtap="contact" value="400-856-0969" imgUrl="./imgs/u3.png"></cell>
     <navigator url="../help/index" class="my-item">
-      <cell label="帮助中心" value="" imgUrl="./imgs/u4.svg"></cell>
+      <cell label="帮助中心" value="" imgUrl="./imgs/u4.png"></cell>
     </navigator>
 
   </view>

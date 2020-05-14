@@ -40,8 +40,8 @@
           bind:close="close"
         ></sno-item>
       </view>
-      <!-- <sno-item sno="123456" custClass="no-bottom"></sno-item> -->
-      <!-- <sno-item sno="123456" bind:clear="onclear"></sno-item> -->
+      <!-- <sno-item sno="123456" index="{{1}}" bind:close="close"></sno-item> 
+      <sno-item sno="123456" bind:clear="onclear"></sno-item> -->
     </view>
   </view>
   <view class="button-area">

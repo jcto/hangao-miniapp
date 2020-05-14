@@ -1,52 +1,24 @@
 <!--pages/waybill/index.wxml-->
-<v-nav title="运单详情"  back="{{back}}" backFlag="false"></v-nav>
+
+<waybill-cell item="{{ histry }}" isDetail="{{ true }}"></waybill-cell>
+
 <view class="waybill margin-container">
-  <view class="way-item indent-info">
-   
-      <view class="">
-        <text class="indent-type">{{histry.TransType}}订单</text>
-        <!-- <text class="indent-time">20190915</text> -->
-      </view>
-      <view>
-        <text class="index-lable">DN单号：</text>
-        <text class="index-content">{{histry.DeliveryNumber}}</text>
-      </view>
-       <view>
-        <text class="index-lable">起始地：</text>
-        <text class="index-content">{{histry.StartSite}}</text>
-      </view>
-      <view>
-        <text class="index-lable">目的地：</text>
-        <text class="index-content">{{histry.EndSite}}</text>
-      </view>
-      <view>
-        <text class="index-lable">数量：</text>
-        <text class="index-content">{{histry.PackageQty}}</text>
-      </view>
-    
-  </view>
-  <!-- <view class="way-item cargo">
-    <view class="num"> 货物编号： </view>
-    <view class="cargo-num">{{detail.Codes}}</view>
-  </view>
-  
-</view> -->
-<view class="way-item cargo">
+  <view class="way-item cargo">
     <view class="num"> 货物编号： </view>
     <view class="cargo-num">
-      <text class="cargo-num-code" wx:for="{{detail.Codes}}">{{item}}</text>
-     
+      <text class="cargo-num-code" wx:for="{{ detail.Codes }}">{{ item }}</text>
     </view>
   </view>
-  
-</view> 
-
-<view class="way-item cargoImg" wx:if="{{detail.Urls.length}}" wx:key = "{{index}}">
-    <image src="{{item}}" wx:for="{{detail.Urls}}"></image>
-    
-  </view>
-<view class="way-item note" wx:if="{{histry.Memo}}">
-  <view class="note-title">备注</view>
-  <view class="note-content">{{histry.Memo}}</view>
 </view>
 
+<view
+  class="way-item cargoImg"
+  wx:if="{{ detail.Urls.length }}"
+  wx:key="{{ index }}"
+>
+  <image src="{{ item }}" wx:for="{{ detail.Urls }}"></image>
+</view>
+<view class="way-item note" wx:if="{{ histry.Memo }}">
+  <view class="note-title">备注</view>
+  <view class="note-content">{{ histry.Memo }}</view>
+</view>
