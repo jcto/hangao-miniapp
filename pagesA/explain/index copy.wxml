@@ -1,6 +1,7 @@
 <view>
   <v-toast isShow="{{ isShow }}" content="{{ valTips }}" bindok="ok"></v-toast>
   <add-pic bindtap="uploadImg"></add-pic>
+  <view class="img-wrap"></view>
   <view
     class="img-wrap"
     wx:for="{{ imgList }}"

@@ -1,0 +1,9 @@
+.img-wrap {
+  width: 686rpx;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  height: 100rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}

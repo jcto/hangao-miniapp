@@ -139,6 +139,20 @@
 					"id": -1,
 					"name": "pages/report/index",
 					"pathName": "pages/report/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pagesCheck/checkInit/checkInit",
+					"pathName": "pagesCheck/checkInit/checkInit",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/histry/index",
+					"pathName": "pages/histry/index",
 					"scene": null
 				}
 			]
