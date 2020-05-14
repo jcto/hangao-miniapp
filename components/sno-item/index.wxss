@@ -14,6 +14,7 @@
   float: right;
   height: 50rpx;
   width: 50rpx;
-  top:20rpx;
-  right: 20rpx;
+  position: relative;
+  top:-10rpx;
+  /* right: 20rpx; */
 }
