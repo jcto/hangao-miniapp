@@ -1,40 +1,25 @@
 <view>
   <v-toast isShow="{{ isShow }}" content="{{ valTips }}" bindok="ok"></v-toast>
-  <add-pic bindtap="uploadImg"></add-pic>
-  <view
-    class="img-wrap"
-    wx:for="{{ imgList }}"
-    data-key="{{ index }}"
-    wx:key="index"
-  >
-    <image src="{{ item.path }}" class="zhaopian"></image>
-    <van-image src="{{ item.path }}"></van-image>
-    <image bindtap="deleteImg" src="../../imgs/cuo.png" id="cuo"></image>
-  </view>
-  <textarea-wraper
-    bind:onFocus="showTips"
-    bind:onBlur="hideTips"
-    hidden="{{ isShow }}"
-    bind:onInput="inputKey"
-  ></textarea-wraper>
-  <view class="button-area">
-    <view class="button-box">
-      <van-button
-        custom-class="to-home"
-        custom-style="color:#333"
-        plain
-        type="primary"
-        bindtap="goBack"
-        >上一页</van-button
-      >
-      <van-button
-        custom-class="next-step"
-        color="#B72729;"
-        type="primary"
-        bindtap="formSubmit"
-        >提交</van-button
-      >
+
+  <view class="add-pic-box ">
+    <add-pic bindtap="uploadImg"></add-pic>
+    <view class="imgs-box">
+      <view class="img-box"  wx:for="{{ imgList }}" data-key="{{ index }}" wx:key="index" bindtap="deleteImg">
+        <van-image width="160rpx" height="160rpx" src="{{item.path}}" />
+        <view class="del">点击删除</view>
+      </view>
+      <image bindtap="uploadImg" class="add-btn" src="./../../imgs/addbtn.png"></image>
     </view>
   </view>
+  <textarea-wraper bind:onFocus="showTips" bind:onBlur="hideTips" hidden="{{ isShow }}" bind:onInput="inputKey">
+  </textarea-wraper>
+  <view class="button-area">
+    <view class="button-box">
+      <van-button custom-class="to-home" custom-style="color:#333" plain type="primary" bindtap="goBack">上一页
+      </van-button>
+      <van-button custom-class="next-step" color="#B72729;" type="primary" bindtap="formSubmit">提交</van-button>
+    </view>
+  </view>
+  <view class="footer-h"></view>
   <footer></footer>
 </view>

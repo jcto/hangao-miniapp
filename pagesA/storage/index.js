@@ -39,6 +39,9 @@ Page({
   onChange(event) {
     const { picker, value, index } = event.detail;
     picker.setColumnValues(1, startColumnsData[value[0]]);
+    this.setData({
+      endtPlaceTips:'点击选择仓库'
+    })
     this.updateEndPickData()
   },
 

@@ -7,3 +7,32 @@
   background-color: #fff;
   margin-top: 20rpx;
 }
+.imgs-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: flex;
+}
+.add-btn{
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+}
+.add-pic-box{
+  position: relative;
+  width: 686rpx;
+  margin: 0 auto;
+}
+.img-box{
+  position: relative;
+}
+.img-box .del{
+  position: absolute;
+  bottom: 0rpx;
+  text-align: center;
+  background-color: #333;
+  opacity: 0.5;
+  width: 100%;
+  color: #ee3453;
+}

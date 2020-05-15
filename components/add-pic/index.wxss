@@ -1,9 +1,9 @@
 .add-pic-area {
   box-sizing: border-box;
   position: relative;
-  padding-top: 100rpx;
+  padding-top: 200rpx;
   width: 686rpx;
-  height: 500rpx;
+  height: 600rpx;
   margin: 0 auto;
   background-color: #fff;
   margin-top: 40rpx;

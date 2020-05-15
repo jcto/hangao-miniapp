@@ -85,3 +85,6 @@ page{
   text-align: center;
   font-size: 24rpx;
 }
+.footer-h{
+  height: 100rpx;
+}
