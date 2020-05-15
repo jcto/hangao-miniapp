@@ -267,19 +267,19 @@ Page({
         }  
         cityStore[city[i].City] = itemArray[i]
       }
-      let columns= [
-        {
-          values: Object.keys(cityStore),
-          className: 'column1'
-      },
-        {
-          values: cityStore['成都'],
-          className: 'column2',
-          defaultIndex: 0
-      }
-      ]
+      // let columns= [
+      //   {
+      //     values: Object.keys(cityStore),
+      //     className: 'column1'
+      // },
+      //   {
+      //     values: cityStore['成都'],
+      //     className: 'column2',
+      //     defaultIndex: 0
+      // }
+      // ]
       this.setData({
-        columns,
+        // columns,
         cityStore,
         storeageIsOk: true,
       })
