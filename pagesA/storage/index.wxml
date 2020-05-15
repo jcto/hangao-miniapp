@@ -98,8 +98,8 @@
   <van-popup show="{{ endPopupFlag }}" bind:close="onClose" position="bottom">
     <view class="ser-tel">如无对应站点请拨打400-856-0969</view>
     <van-picker
-      columns="{{ columns2 }}"
-      bind:change="onChange2"
+      columns="{{ endColumns }}"
+      bind:change="onendChange"
       show-toolbar
       bind:cancel="onCancel"
       bind:confirm="onendConfirm"
