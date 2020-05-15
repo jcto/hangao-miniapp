@@ -317,7 +317,7 @@ Page({
       showPopupFlag:false,
       startPlaceTips: value
     })
-    
+
     this.getStrageID(value, "outstartID");
     this.updateEndPickData();
     
@@ -340,7 +340,7 @@ Page({
         }
       })
     }
-    
+
   },
 
   onCancel(event) {
@@ -446,7 +446,6 @@ updateEndPickData(){
 },
 onendChange(event){
   const { picker, value, index } = event.detail;
-  debugger
   console.log('******',value)
   if(!value[0]||!endColumnsData){
     return
