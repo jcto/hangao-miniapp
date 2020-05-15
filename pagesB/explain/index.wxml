@@ -6,7 +6,7 @@
     <view class="imgs-box">
       <view class="img-box"  wx:for="{{ imgList }}" data-key="{{ index }}" wx:key="index" bindtap="deleteImg">
         <van-image width="160rpx" height="160rpx" src="{{item.path}}" />
-        <view class="del">点击删除</view>
+        <view class="del"  id="cuo">点击删除</view>
       </view>
       <image bindtap="uploadImg" class="add-btn" src="./../../imgs/addbtn.png"></image>
     </view>

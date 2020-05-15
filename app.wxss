@@ -88,3 +88,24 @@ page{
 .footer-h{
   height: 100rpx;
 }
+
+
+.sno-item{
+  box-sizing: border-box;
+  padding: 16rpx 20rpx 16rpx 20rpx;
+  height: 70rpx;
+  width: 646rpx;
+  color: #333;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+.sno-item.no-bottom{
+  border-bottom:none;
+}
+.clear-btn{
+  float: right;
+  height: 50rpx;
+  width: 50rpx;
+  position: relative;
+  top:-10rpx;
+  /* right: 20rpx; */
+}

@@ -8,13 +8,19 @@
     </input-wraper>
     <view class="gutter20"></view>
     <view class="scan-list" wx:if="{{list.length}}">
-      <view wx:key="key" wx:for="{{ list }}">
+      <view wx:key="index" wx:for="{{ list }}">
+        <view class="sno-item" >
+          <text>{{item}}</text>
+          <image class="clear-btn" id="close" bindtap="onClose" data-index="{{index}}" src="./../../imgs/close.png"></image>
+        </view>
+      </view>
+      <!-- <view wx:key="key" wx:for="{{ list }}">
         <sno-item
           index="{{ index }}"
           sno="{{ item }}"
           bind:close="close"
         ></sno-item>
-      </view>
+      </view> -->
       <!-- <sno-item sno="123456"></sno-item>
       <sno-item sno="123456" custClass="no-bottom"></sno-item> -->
       <!-- <sno-item sno="123456" bind:clear="onclear"></sno-item> -->

@@ -5,10 +5,10 @@ Page({
     show: true,
     transitionModel: "",
     list: [],
-   
 
-    total:0,//桶数
-    isShow:false
+
+    total: 0,//桶数
+    isShow: false
   },
   // 删除
   onClose(e) {
@@ -18,7 +18,7 @@ Page({
       this.showToast({
         msg: "是否删除"
       }).then(res => {
-        
+
         this._removeList(index)
         wx.setStorageSync("outTankList", this.data.list)
       })
@@ -76,9 +76,9 @@ Page({
     let list = this.data.list;
     wx.scanCode({
       success: (res) => {
-       
+
         let result = res.result;
-       
+
         that.tkCheck(result)
       },
       fail: (res) => {
@@ -98,35 +98,37 @@ Page({
   // 上一页
   goBack() {
     wx.setStorageSync("outTankList", this.data.list)
+    // this.saveOutTankList()
     wx.navigateBack({})
   },
-  
- 
-// 下一页
-  next(){
-    if (this.data.total != this.data.list.length){
+
+
+  // 下一页
+  next() {
+    if (this.data.total != this.data.list.length) {
       this.setData({
-        isShow:true
+        isShow: true
       });
       return
     }
     // 储存tk列表的值
     wx.setStorageSync("outTankList", this.data.list)
-   
+    // this.saveOutTankList()
+
     wx.navigateTo({
       url: '../explain/index',
     })
   },
-  onShow:function(){
+  onShow: function () {
     let DNINFO = wx.getStorageSync("OUTINFO");
     let list = wx.getStorageSync("outTankList");
-    
+    // debugger
     console.log(list)
-    if(!list){
+    if (!list) {
       list = []
     };
     if (this.data.list !== list) {
-    
+
       this.setData({
         total: tNum,
         DN: DNINFO.TKNUMBER,
@@ -139,7 +141,19 @@ Page({
     this.setData({
       total: tNum,
       DN: DNINFO.TKNUMBER,
-     
+
     })
+  },
+  // chn新增加的方法
+  close(e) {
+    this.onClose(e.detail)
+  },
+  saveOutTankList() {
+    let newList=this.data.list.map((item)=>{
+      return item
+    })
+    debugger
+    wx.setStorageSync("outTankList", newList)
+
   }
 })

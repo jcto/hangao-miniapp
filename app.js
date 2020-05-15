@@ -28,7 +28,7 @@ App({
     let h = this.addZero(date.getHours());
     let m = this.addZero(date.getMinutes());
 
-    let NowTime = `${year}-${month}-${days}  ${h}：${m}`;
+    let NowTime = `${year}-${month}-${days}  ${h}:${m}`;
     return NowTime
     // console.log(NowTime)
     // this.setData({
