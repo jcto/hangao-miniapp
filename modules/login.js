@@ -181,7 +181,22 @@ class loginModules extends HTTP {
     return GetStockReportList
   }
   
-
+// chn 入库获取city info 
+    getInCity(){
+      const City = this.request({
+        url:"/Site/GetInStockFlows",
+        method: "GET",
+      })
+      return City
+    }
+    // chn 出库获取city info 
+    getOutCity(){
+      const City = this.request({
+        url:"/Site/GetOutStockFlows",
+        method: "GET",
+      })
+      return City
+    }
 }
 
 

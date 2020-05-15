@@ -1,8 +1,10 @@
 const app = getApp();
 import { loginModules } from "../../modules/login.js";
+import { filterSite } from "../../modules/filterSite.js";
 let LoginModules = new loginModules();
-
-
+let startColumnsData;
+let endPickData;
+let endColumnsData;
 
 Page({
   /**
@@ -42,7 +44,8 @@ Page({
   },
   onChange(event) {
     const { picker, value, index } = event.detail;
-    picker.setColumnValues(1,this.data.cityStore[value[0]]);
+    picker.setColumnValues(1, startColumnsData[value[0]]);
+    this.updateEndPickData()
   },
 
 
@@ -73,7 +76,11 @@ Page({
     // 获取城市以及对应的仓库
     this.getCityAndStroage();
 
+    //  获取始发地和目的地联动数据
 
+    LoginModules.getOutCity().then((res) => {
+      this.initPickData(res);
+    });
   },
   _checkDestination() {
     let outstartID = wx.getStorageSync("outstartID");
@@ -308,7 +315,8 @@ Page({
       startPlaceTips: value
     })
     
-    this.getStrageID(value, "outstartID")
+    this.getStrageID(value, "outstartID");
+    this.updateEndPickData();
     
   },
 
@@ -383,7 +391,65 @@ Page({
 
     wx.setStorageSync("inTotal", this.data.total)
   },
- 
+ // chn 初始化起始地选择
+ initPickData(res) {
+  const siteMap = filterSite(res);
+  const startSite=siteMap.startSite;
+  const citys=Object.keys(siteMap.startSite)
+  startColumnsData=startSite
+  endPickData=siteMap.endSite
+
+  const columns = [
+    {
+      values: citys,
+      className: "column1",
+    },
+    {
+      values:citys[0]?startSite[citys[0]]:[],
+      className: "column2",
+      defaultIndex: 0,
+    },
+  ];
+  this.setData({
+    columns
+  })
+},
+// 更新目的地 依据起始地选择进行联动更新
+updateEndPickData(){
+  let startPlaceTips=this.data.startPlaceTips;
+  // const endSite=endPickData[]
+  if(startPlaceTips==='点击选择仓库'){
+    return
+  }
+  startPlaceTips=startPlaceTips[1];
+
+  endColumnsData= endPickData[startPlaceTips]||{}
+  const citys=Object.keys(endColumnsData)
+
+  const endColumns=[
+    {
+      values: citys,
+      className: "column1",
+    },
+    {
+      values:citys[0]?endColumnsData[citys[0]]:[],
+      className: "column2",
+      defaultIndex: 0,
+    },
+  ];
+  this.setData({
+    endColumns
+  })
+},
+onendChange(event){
+  const { picker, value, index } = event.detail;
+  debugger
+  console.log('******',value)
+  if(!value[0]||!endColumnsData){
+    return
+  }
+  picker.setColumnValues(1, endColumnsData&&endColumnsData[value[0]]);
+}
 });
 
 

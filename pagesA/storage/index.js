@@ -351,7 +351,7 @@ Page({
   },
 
   onCancel(event) {
-    this.updateEndPickData()
+    // this.updateEndPickData()
     this.setData({
       showPopupFlag: false,
       endPopupFlag: false,
@@ -413,14 +413,13 @@ Page({
   },
   // 更新目的地 依据起始地选择进行联动更新
   updateEndPickData(){
-    debugger;
-    let startPlaceTips=this.data.startPlaceTips[1];
+    let startPlaceTips=this.data.startPlaceTips;
     // const endSite=endPickData[]
     if(startPlaceTips==='点击选择仓库'){
       return
     }
-
-    endColumnsData= endPickData[startPlaceTips]
+    startPlaceTips=startPlaceTips[1]
+    endColumnsData= endPickData[startPlaceTips]||{}
     const citys=Object.keys(endColumnsData)
 
     const endColumns=[
@@ -440,6 +439,6 @@ Page({
   },
   onendChange(event){
     const { picker, value, index } = event.detail;
-    picker.setColumnValues(1, endColumnsData[value[0]]);
+    picker.setColumnValues(1, endColumnsData&&endColumnsData[value[0]]);
   }
 });
