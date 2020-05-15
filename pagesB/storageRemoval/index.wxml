@@ -1,15 +1,17 @@
 <view class="page-container">
   <view class="inbound-area pd20">
     <view class="scan-wraper">
-      <input-wraper label="DN单号：" placeholder="请输入单号或扫码" bind:inputChange="changeDnNum" value="{{ DnNum }}"
-        required="{{ false }}" titleWidth="140rpx">
+      <input-wraper label="DN单号：" placeholder="请输入单号或扫码" bind:onBlur="inputEnd" bind:inputChange="changeDnNum" value="{{ DnNum }}"
+      errMsg="{{Tipsflag?'':dnTips}}"  
+      required="{{ false }}" titleWidth="140rpx">
       </input-wraper>
       <image class="right-icon" bindtap="scan" src="./../../imgs/right-scan.png"></image>
     </view>
 
     <view class="gutter20"></view>
     <input-wraper label="总桶数：" bind:inputChange="changeTotal" bind:onBlur="totalInputEnd" type="number"
-      placeholder="请输入货桶的数目" required="{{ false }}" titleWidth="140rpx">
+    errMsg="{{totalflag?'':totalTips}}"
+    placeholder="请输入货桶的数目" required="{{ false }}" titleWidth="140rpx">
     </input-wraper>
     <view class="gutter20"></view>
 
@@ -26,7 +28,7 @@
   </view>
   <view class="button-area">
     <view class="button-box">
-      <van-button custom-class="to-home" custom-style="color:#333" plain type="primary" bindtap='goBack'>上一页</van-button>
+      <van-button custom-class="to-home" custom-style="color:#333" plain type="primary" bindtap='goBack'>返回首页</van-button>
       <van-button custom-class="next-step" color="#B72729;" type="primary" bindtap="next" >下一页</van-button>
     </view>
   </view>

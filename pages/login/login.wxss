@@ -1,7 +1,7 @@
 /* pages/test/index.wxss */
 .login-area{
   background-color: #fff;
-  padding-top: 200rpx;
+  padding-top: 120rpx;
   padding-bottom: 40rpx;
 }
 .login-area .logo{

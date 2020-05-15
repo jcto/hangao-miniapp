@@ -8,6 +8,7 @@
   width: 648rpx;
   height: 94rpx;
   margin:0rpx auto;
+  position: relative;
 }
 /* .input-wraper.nobottom{
   margin-bottom: 0rpx;
@@ -25,3 +26,13 @@
   width: 40rpx;
 }
 
+
+.err-tips{
+position: absolute;
+right: 0rpx;
+bottom: -35rpx;
+text-align: right;
+width: 90%;
+font-size: 20rpx;
+color: #ee0a24;
+}

@@ -33,6 +33,10 @@ Component({
       type: String,
       value: "",
     },
+    errMsg:{
+      type:String,
+      value:''
+    },
     type: String, // 简化的定义方式
   },
   methods: {

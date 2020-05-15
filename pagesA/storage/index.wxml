@@ -7,11 +7,12 @@
       <input-wraper
         label="DN单号："
         bind:inputChange="changeDnNum"
-        bind:blur="inputEnd"
+        bind:onBlur="inputEnd"
         placeholder="请输入单号或扫码"
         value="{{ DnNum }}"
         required="{{ false }}"
         titleWidth="140rpx"
+        errMsg="{{Tipsflag?'':dnTips}}"
       >
       </input-wraper>
       <image
@@ -33,6 +34,7 @@
       placeholder="请输入货桶的数目"
       required="{{ false }}"
       titleWidth="140rpx"
+      errMsg="{{totalflag?'':totalTips}}"
     >
     </input-wraper>
     <view class="gutter20"></view>
@@ -71,7 +73,7 @@
         plain
         type="primary"
         bindtap="goBack"
-        >上一页</van-button
+        >返回首页</van-button
       >
       <van-button
         custom-class="next-step"
@@ -96,8 +98,8 @@
   <van-popup show="{{ endPopupFlag }}" bind:close="onClose" position="bottom">
     <view class="ser-tel">如无对应站点请拨打400-856-0969</view>
     <van-picker
-      columns="{{ columns }}"
-      bind:change="onChange"
+      columns="{{ columns2 }}"
+      bind:change="onChange2"
       show-toolbar
       bind:cancel="onCancel"
       bind:confirm="onendConfirm"

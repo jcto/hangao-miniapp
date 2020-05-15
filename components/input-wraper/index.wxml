@@ -1,6 +1,7 @@
 <view class="input-wraper">
   <view class="left-icon"></view>
   <van-field
+    cursor-spacing="{{100}}" 
     label="{{ label }}"
     type="{{ type }}"
     required="{{ required }}"
@@ -15,4 +16,5 @@
     placeholder="{{placeholder}}"
     border="{{ false }}"
   ></van-field>
+  <view wx:if="{{errMsg}}" class="err-tips">{{errMsg}}</view>
 </view>
