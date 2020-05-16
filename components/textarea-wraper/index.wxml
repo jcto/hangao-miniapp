@@ -2,7 +2,9 @@
   <text class="text">备注</text>
   <view class="textarea-wraper">
     <view class="left-icon"></view>
-    <textarea maxlength= "150"  bindfocus='showTips' bindblur='hideTips' bindinput='inputKey' placeholder='最多可输入150个字' class="textarea" bindinput='inputKey'   hidden="{{isShow}}" maxlength= "150" bindfocus='showTips' bindblur='hideTips'></textarea>
+    <text wx:if="{{isShow}}" class="textarea">{{value}}
+    </text>
+    <textarea wx:else maxlength="150" bindfocus='showTips' bindblur='hideTips' bindinput='inputKey'
+      placeholder='最多可输入150个字' class="textarea" value="{{value}}"></textarea>
   </view>
 </view>
-

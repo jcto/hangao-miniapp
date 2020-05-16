@@ -241,18 +241,24 @@ import {
       if (setStorageNAme === 'inNowID') {
         if (value[0]==="全部"){
           NowSiteId = ""
+          wx.setStorageSync(setStorageNAme, '');
+
         }
         this.GetStockReport(NowSiteId);
       }
       if (setStorageNAme === 'inendID') {
         if (value[0] === "全部") {
           inendID = ""
+          wx.setStorageSync(setStorageNAme, '');
+
         }
         this.GetTransitReport(instartID, inendID)
       }
       if (setStorageNAme === 'instartID') {
         if (value[0] === "全部") {
           instartID = ""
+          wx.setStorageSync(setStorageNAme, '');
+
         }
         this.GetTransitReport(instartID, inendID)
       }

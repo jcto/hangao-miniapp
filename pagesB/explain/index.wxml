@@ -1,5 +1,4 @@
 <view>
-  <v-toast isShow="{{ isShow }}" content="{{ valTips }}" bindok="ok"></v-toast>
 
   <view class="add-pic-box ">
     <add-pic bindtap="uploadImg"></add-pic>
@@ -11,7 +10,7 @@
       <image bindtap="uploadImg" class="add-btn" src="./../../imgs/addbtn.png"></image>
     </view>
   </view>
-  <textarea-wraper bind:onFocus="showTips" bind:onBlur="hideTips" hidden="{{ isShow }}" bind:onInput="inputKey">
+  <textarea-wraper isShow="{{isShow}}" value="{{note}}" bind:onFocus="showTips" bind:onBlur="hideTips"  bind:onInput="inputNote">
   </textarea-wraper>
   <view class="button-area">
     <view class="button-box">
@@ -20,6 +19,8 @@
       <van-button custom-class="next-step" color="#B72729;" type="primary" bindtap="formSubmit">提交</van-button>
     </view>
   </view>
+  <v-toast isShow="{{ isShow }}" content="{{ valTips }}" bindok="ok"></v-toast>
+
   <view class="footer-h"></view>
   <footer></footer>
 </view>

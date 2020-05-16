@@ -1,5 +1,9 @@
 Component({
   properties: {
+    isShow:{
+      type:Boolean,
+      value:false
+    },
     label: {
       // 属性名
       type: String,
