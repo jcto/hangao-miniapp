@@ -1,5 +1,6 @@
 {
     "usingComponents": {
+      "swiper": "../../components/swiper/index",
       "footer": "../../components/footer/index",
       "input-wraper": "../../components/input-wraper/index",
       "van-grid": "@vant/weapp/grid/index",

@@ -1,5 +1,6 @@
 page{
   background-color: #F8F8F8;
+  padding-bottom: 100rpx;
 }
 .footer{
   position: fixed;
@@ -108,4 +109,9 @@ page{
   position: relative;
   top:-10rpx;
   /* right: 20rpx; */
+}
+
+.scan-list {
+  max-height: 330rpx;
+  overflow-y: scroll;
 }

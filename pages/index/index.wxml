@@ -1,8 +1,8 @@
 <!-- <v-nav title="可回收包装追溯系统">
   <image src='../../images/navlogo.png' slot="logo" class='logo'></image>
 </v-nav> -->
-<image class="home-banner" src="./imgs/lun1.jpg"></image>
-
+<!-- <image class="home-banner" src="./imgs/lun1.jpg"></image> -->
+<swiper></swiper>
 <view class="home-grid">
   <view class="margin10"></view>
   <navigator url="../../pagesA/storage/index">
