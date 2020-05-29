@@ -12,6 +12,7 @@ height: 100rpx;
 
   justify-content: center;
   border-top: 2rpx solid #e2e2e2;
+  z-index: -99;
 }
 .footer .footer-img {
   display: inline-block;
