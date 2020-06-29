@@ -3,6 +3,7 @@
 </v-nav> -->
 <!-- <image class="home-banner" src="./imgs/lun1.jpg"></image> -->
 <swiper></swiper>
+
 <view class="home-grid">
   <view class="margin10"></view>
   <navigator url="../../pagesA/storage/index">
@@ -53,4 +54,6 @@
       <view class="grid-text">History</view>
     </view>
   </navigator>
+
+  <tab-bar></tab-bar>
 </view>

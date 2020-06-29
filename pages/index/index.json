@@ -2,6 +2,7 @@
     "usingComponents": {
       "swiper": "../../components/swiper/index",
       "footer": "../../components/footer/index",
+      "tab-bar": "../../components/tab-bar/index",
       "input-wraper": "../../components/input-wraper/index",
       "van-grid": "@vant/weapp/grid/index",
       "van-grid-item": "@vant/weapp/grid-item/index",
