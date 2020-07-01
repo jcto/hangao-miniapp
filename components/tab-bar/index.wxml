@@ -1,10 +1,34 @@
 
-<van-popup custom-class='my-pop'  closeable 
-close-icon-position="bottom"
-show="{{ show }}" bind:close="onClose">
-<view style="height: 400rpx; width:200rpx;background-color: rgba(0, 0, 0, 0);">
-<view style="height: 300rpx; width:200rpx;"></view>
-</view>
+<van-popup custom-class='chn-pop'  show="{{ show }}" bind:close="onClose">
+    <view class="pop-container">
+        <view class="pop-box">
+            <image class="pop-bg" src="./imgs/pop-bg.png"/>
+
+            
+            
+            <view class="content">
+                <image class="pop-logo" src="./imgs/logo.png"/>
+                <view class="cell-box">
+                    <text class="cell-label">编号：</text>
+                    <text class="cell-value"> 000009999</text>
+                </view>
+                <view class="cell-box">                    
+                    <text class="cell-label">桶重：100kg</text>
+                    <text class="cell-value"> </text>
+                </view>
+                <view class="cell-box">
+                    <text class="cell-label">客户：</text>
+                    <text class="cell-value">添加敞开</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="close-btn-box">
+            <image class="close-btn" src="/imgs/close.png"/>
+        </view>
+        
+    </view>
+
 
 </van-popup>
 

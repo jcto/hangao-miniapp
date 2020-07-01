@@ -117,3 +117,8 @@ page{
   max-height: 330rpx;
   overflow-y: scroll;
 }
+
+.van-popup.bar-index--chn-pop{
+  background-color: rgba(0, 0, 0, 0);
+  
+  }

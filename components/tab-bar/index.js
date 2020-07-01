@@ -1,7 +1,7 @@
 Component({
     data: {
         active: 0, 
-        show: false,
+        show: true,
     },
     methods: {
         showPopup() {

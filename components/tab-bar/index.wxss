@@ -1,4 +1,58 @@
-.chntest{
+.chntest {
   position: relative;
   bottom: 0rpx;
+}
+
+.pop-container {
+  /* width: 352rpx; */
+  /* height: 500rpx; */
+  /* position: relative; */
+}
+.pop-box {
+  width: 352rpx;
+  height: 500rpx;
+  position: relative;
+  background-color: #fff;
+  border-radius: 14rpx;
+  overflow: hidden;
+}
+
+.pop-bg {
+  width: 99%;
+  height: 100%;
+  position: relative;
+  left: 1%;
+}
+.content {
+  position: absolute;
+  top: 0;
+  width: 352rpx;
+  height: 400rpx;
+  z-index: 101;
+  /* background-color: #fff; */
+  /* opacity: 0; */
+  background-color: rgba(0, 0, 0, 0);
+}
+.cell-box{
+padding-left: 50rpx;
+  color: #333;
+  font-size: 24rpx;
+}
+.pop-logo {
+  width: 200rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 40rpx;
+}
+.close-btn-box {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  height: 76rpx;
+  line-height: 76rpx;
+}
+.close-btn {
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
 }
