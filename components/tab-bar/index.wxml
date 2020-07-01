@@ -2,10 +2,7 @@
 <van-popup custom-class='chn-pop'  show="{{ show }}" bind:close="onClose">
     <view class="pop-container">
         <view class="pop-box">
-            <image class="pop-bg" src="./imgs/pop-bg.png"/>
-
-            
-            
+            <image class="pop-bg" src="./imgs/pop-bg.png"/>            
             <view class="content">
                 <image class="pop-logo" src="./imgs/logo.png"/>
                 <view class="cell-box">
@@ -24,7 +21,7 @@
         </view>
 
         <view class="close-btn-box">
-            <image class="close-btn" src="/imgs/close.png"/>
+            <image class="close-btn" src="./imgs/close.png"/>
         </view>
         
     </view>
@@ -38,7 +35,7 @@
         <image slot="icon-active" src="/imgs/home.png" mode="aspectFit" style="width: 60rpx; height: 40rpx;" />
         首页/ Home</van-tabbar-item>
     <van-tabbar-item>
-        <image src="/imgs/user.png" style="width: 30rpx; height: 18rpx;"/>
+        <image class="scan-bar" src="./imgs/scan.png" />
     </van-tabbar-item>
     <van-tabbar-item>
         <image slot="icon" src="/imgs/user.png" mode="aspectFit" style="width: 120rpx; height: 100rpx;" />
