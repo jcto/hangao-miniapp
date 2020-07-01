@@ -31,14 +31,14 @@
 
 <van-tabbar inactive-color='#000' active-color='#B72729' active="{{ active }}" bind:change="onChange">
     <van-tabbar-item>
-        <image slot="icon" src="/imgs/home2.png" mode="aspectFit" style="width: 30rpx; height: 18rpx;" />
-        <image slot="icon-active" src="/imgs/home.png" mode="aspectFit" style="width: 60rpx; height: 40rpx;" />
+        <image slot="icon" src="/imgs/home2.png" mode="aspectFit" style="width: 60rpx; height: 60rpx;" />
+        <image slot="icon-active" src="/imgs/home.png" mode="aspectFit" style="width: 60rpx; height: 60rpx;" />
         首页/ Home</van-tabbar-item>
     <van-tabbar-item>
         <image class="scan-bar" src="./imgs/scan.png" />
     </van-tabbar-item>
     <van-tabbar-item>
-        <image slot="icon" src="/imgs/user.png" mode="aspectFit" style="width: 120rpx; height: 100rpx;" />
-        <image slot="icon-active" src="/imgs/user2.png" mode="aspectFit" style="width: 120rpx; height: 100rpx;" />
+        <image slot="icon" src="/imgs/user.png" mode="aspectFit" style="width: 60rpx; height: 60rpx;" />
+        <image slot="icon-active" src="/imgs/user2.png" mode="aspectFit" style="width: 60rpx; height: 60rpx;" />
         个人/Personal</van-tabbar-item>
 </van-tabbar>
