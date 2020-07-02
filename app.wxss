@@ -122,3 +122,10 @@ page{
   background-color: rgba(0, 0, 0, 0);
   
   }
+  .van-tabbar-item .van-tabbar-item__text{
+    position: relative;
+    top: -6rpx;
+  }
+  .van-tabbar-item .van-tabbar-item__icon{
+    margin-bottom: 0;
+  }

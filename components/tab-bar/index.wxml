@@ -7,11 +7,11 @@
                 <image class="pop-logo" src="./imgs/logo.png"/>
                 <view class="cell-box">
                     <text class="cell-label">编号：</text>
-                    <text class="cell-value"> 000009999</text>
+                    <text class="cell-value">000009999</text>
                 </view>
                 <view class="cell-box">                    
-                    <text class="cell-label">桶重：100kg</text>
-                    <text class="cell-value"> </text>
+                    <text class="cell-label">桶重：</text>
+                    <text class="cell-value">100kg</text>
                 </view>
                 <view class="cell-box">
                     <text class="cell-label">客户：</text>
@@ -21,7 +21,7 @@
         </view>
 
         <view class="close-btn-box">
-            <image class="close-btn" src="./imgs/close.png"/>
+            <image bindtap="onClose" class="close-btn" src="./imgs/close.png"/>
         </view>
         
     </view>
@@ -31,8 +31,8 @@
 
 <van-tabbar inactive-color='#000' active-color='#B72729' active="{{ active }}" bind:change="onChange">
     <van-tabbar-item>
-        <image slot="icon" src="/imgs/home2.png" mode="aspectFit" style="width: 60rpx; height: 60rpx;" />
-        <image slot="icon-active" src="/imgs/home.png" mode="aspectFit" style="width: 60rpx; height: 60rpx;" />
+        <image slot="icon" src="/imgs/home2.png" mode="aspectFit" style="width: 60rpx; height: 34rpx;" />
+        <image slot="icon-active" src="/imgs/home.png" mode="aspectFit" style="width: 60rpx; height: 34rpx;" />
         首页/ Home</van-tabbar-item>
     <van-tabbar-item>
         <image class="scan-bar" src="./imgs/scan.png" />
