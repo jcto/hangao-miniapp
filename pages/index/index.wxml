@@ -2,9 +2,58 @@
   <image src='../../images/navlogo.png' slot="logo" class='logo'></image>
 </v-nav> -->
 <!-- <image class="home-banner" src="./imgs/lun1.jpg"></image> -->
+<swiper></swiper>
 
 <view class="home-grid">
   <view class="margin10"></view>
+  <navigator url="../../pagesA/storage/index">
+    <view class="home-grid-item  left">
+      <image class="backgrd left" src="./imgs/home1@3x.png"></image>
+      <image class="grid-icon left" src="./imgs/i1@3x.png"></image>
+      <view class="grid-title">产品入库</view>
+      <view class="grid-text"><text>Inbound</text></view>
+    </view>
+  </navigator>
+  <navigator url='../../pagesB/storageRemoval/index'>
+    <view class="home-grid-item right">
+      <image class="backgrd right" src="./imgs/home2@3x.png"></image>
+      <image class="grid-icon right" src="./imgs/i2@3x.png"></image>
+      <view class="grid-title">产品出库</view>
+      <view class="grid-text"><text>Outbound</text></view>
+    </view>
+  </navigator>
+  <navigator url='../../pagesA/removal/index'>
+    <view class="home-grid-item  left">
+      <image class="backgrd left" src="./imgs/home3@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i3@3x.png"></image>
+      <view class="grid-title">初始入库</view>
+      <view class="grid-text"><text>Initial</text></view>
+    </view>
+  </navigator>
+  <navigator url='../../pagesCheck/checkInit/checkInit'>
+    <view class="home-grid-item right">
+      <image class="backgrd right" src="./imgs/home4@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i4@3x.png"></image>
+      <view class="grid-title">货物盘点</view>
+      <view class="grid-text">Count</view>
+    </view>
+  </navigator>
+  <navigator url='../../pages/report/index'>
+    <view class="home-grid-item  left">
+      <image class="backgrd left" src="./imgs/home5@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i5@3x.png"></image>
+      <view class="grid-title">跟踪报表</view>
+      <view class="grid-text">Tracking Report</view>
+    </view>
+  </navigator>
+  <navigator url='../../pages/histry/index'>
+    <view class="home-grid-item right">
+      <image class="backgrd right" src="./imgs/home6@3x.png"></image>
+      <image class="grid-icon" src="./imgs/i6@3x.png"></image>
+      <view class="grid-title">历史运单</view>
+      <view class="grid-text">History</view>
+    </view>
+  </navigator>
 
   <tab-bar></tab-bar>
 </view>

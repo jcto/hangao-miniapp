@@ -15,6 +15,8 @@ Component({
     },
     scan() {
       let _this = this;
+      this.setData({ show: true });
+return
       wx.scanCode({
         success: (res) => {
           let result = res.result;
