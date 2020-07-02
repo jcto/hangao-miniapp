@@ -5,19 +5,24 @@
   /* position: relative; */
 }
 .pop-box {
-  width: 480rpx;
-  height: 707rpx;
+  width:520rpx;
+  height: 700rpx;
   position: relative;
   background-color: #fff;
   border-radius: 14rpx;
   /* overflow: hidden; */
   box-sizing: border-box;
+  padding-top: 52rpx;
 }
 
 .pop-bg {
-  width: 100%;
-  height: 100%;
+  width: 464rpx;
+  height: 604rpx;
   position: relative;
+  margin: 0 auto;
+  /* margin-top: 52rpx; */
+  margin-bottom: 44rpx;
+  display: block;
 }
 .content {
   position: absolute;
@@ -31,7 +36,7 @@
   background-color: rgba(0, 0, 0, 0);
 }
 .cell-box{
-    padding-left: 83rpx;
+    padding-left: 86rpx;
   color: #333;
   font-size: 36rpx;
   height: 80rpx;
