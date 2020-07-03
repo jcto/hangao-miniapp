@@ -26,4 +26,5 @@
     bindtap="getOut"
     >退出登录</van-button
   >
+  <tab-bar pageType="{{2}}"></tab-bar>
 </view>

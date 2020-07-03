@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "cell":"./../../components/cell/index",
-
+    "tab-bar": "../../components/tab-bar/index",
     "van-button": "@vant/weapp/button/index"
   },
   "navigationBarTitleText":"个人中心",

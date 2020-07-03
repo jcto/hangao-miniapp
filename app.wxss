@@ -3,6 +3,7 @@ page{
   position: relative;
   height: 97%;
   box-sizing: border-box;
+  min-height: 1400rpx;
 }
 .footer{
   position: fixed;
