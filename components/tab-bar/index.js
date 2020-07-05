@@ -1,4 +1,6 @@
 import { loginModules } from "../../modules/login.js";
+import { checkRole } from "../../modules/roleMap.js";
+
 let LoginModules = new loginModules();
 Component({
   data: {
@@ -29,6 +31,15 @@ Component({
     },
     scan() {
       let _this = this;
+      const userRole = wx.getStorageSync('userRole')
+      if(!checkRole('ScanQR',userRole)){
+        wx.showToast({
+          title: '请检查权限！',
+          icon: 'none',
+          duration: 2000
+        })
+        return
+      }
       wx.scanCode({
         success: (res) => {
           let result = res.result;

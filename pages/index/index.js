@@ -1,6 +1,6 @@
 
 import { loginModules } from "../../modules/login.js";
-import roleMap from "../../modules/roleMap.js";
+import { checkRole } from "../../modules/roleMap.js";
 let LoginModules = new loginModules();
 
 const app = getApp();
@@ -13,12 +13,12 @@ Page({
     show: true,
     transitionModel: "",
     role: '',
-    canInbound:true,
-    canOutbound:true,
-    canInitial:true,
-    canCount:true,
-    canTracking:true,
-    canHistory:true,
+    canInbound: true,
+    canOutbound: true,
+    canInitial: true,
+    canCount: true,
+    canTracking: true,
+    canHistory: true,
     TrackingReport_wrapShow: false
   },
   onClose() {
@@ -70,15 +70,15 @@ Page({
       wx.setStorageSync("userRole", res.Role)
       this.setData({
         // 如果为空 默认为承运商
-        role: res.Role||'承运商',
+        role: res.Role || '承运商',
       })
       this.setData({
-        canInbound:this.checkRole('Inbound'),
-        canOutbound:this.checkRole('Outbound'),
-        canInitial:this.checkRole('Initial'),
-        canCount:this.checkRole('Count'),
-        canTracking:this.checkRole('Tracking'),
-        canHistory:this.checkRole('History')
+        canInbound: this.checkRole('Inbound'),
+        canOutbound: this.checkRole('Outbound'),
+        canInitial: this.checkRole('Initial'),
+        canCount: this.checkRole('Count'),
+        canTracking: this.checkRole('Tracking'),
+        canHistory: this.checkRole('History')
       })
       this.data.userSiteId = res.SiteId
     })
@@ -129,19 +129,19 @@ Page({
    */
   onShow: function () {
 
-  const userRole= wx.getStorageSync('userRole')
-  this.setData({
-    role: userRole,
-  })
+    const userRole = wx.getStorageSync('userRole')
+    this.setData({
+      role: userRole,
+    })
 
-  const temp={
-    canInbound:this.checkRole('Inbound'),
-    canOutbound:this.checkRole('Outbound'),
-    canInitial:this.checkRole('Initial'),
-    canCount:this.checkRole('Count'),
-    canTracking:this.checkRole('Tracking'),
-    canHistory:this.checkRole('History')
-  }
+    const temp = {
+      canInbound: this.checkRole('Inbound'),
+      canOutbound: this.checkRole('Outbound'),
+      canInitial: this.checkRole('Initial'),
+      canCount: this.checkRole('Count'),
+      canTracking: this.checkRole('Tracking'),
+      canHistory: this.checkRole('History')
+    }
     this.setData(temp)
     this.clearStroageInfo()
     // 获取到用户信息 且 未登录不进行请求当前用户信息
@@ -185,16 +185,16 @@ Page({
 
   },
   checkRole(name) {
-    return (roleMap[name] || []).indexOf(this.data.role) > -1
+    return checkRole(name, this.data.role)
   },
   navTo(e) {
     const name = e.currentTarget.dataset.name
     let url = e.currentTarget.dataset.url
-    if(this.checkRole(name)){
+    if (this.checkRole(name)) {
       wx.navigateTo({
         url
       })
-    }else{
+    } else {
       wx.showToast({
         title: '请检查权限！',
         icon: 'none',
