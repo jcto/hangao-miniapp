@@ -19,7 +19,7 @@ Page({
     canCount: true,
     canTracking: true,
     canHistory: true,
-    TrackingReport_wrapShow: false
+    // TrackingReport_wrapShow: false
   },
   onClose() {
 
@@ -67,19 +67,7 @@ Page({
       let siteName = res.SiteName;
       wx.setStorageSync("siteName", siteName)
       wx.setStorageSync("userSiteId", res.SiteId)
-      wx.setStorageSync("userRole", res.Role)
-      this.setData({
-        // 如果为空 默认为承运商
-        role: res.Role || '承运商',
-      })
-      this.setData({
-        canInbound: this.checkRole('Inbound'),
-        canOutbound: this.checkRole('Outbound'),
-        canInitial: this.checkRole('Initial'),
-        canCount: this.checkRole('Count'),
-        canTracking: this.checkRole('Tracking'),
-        canHistory: this.checkRole('History')
-      })
+
       this.data.userSiteId = res.SiteId
     })
   },
@@ -115,11 +103,25 @@ Page({
   onReady: function () {
     // 判断用户者当前账号为 henkel01 才显示‘跟踪报表’
     LoginModules.getUserInfo().then(res => {
-      if (res.UserAccount === 'henkel01') {
-        this.setData({
-          TrackingReport_wrapShow: true
-        })
-      }
+      // if (res.UserAccount === 'henkel01') {
+      //   this.setData({
+      //     // TrackingReport_wrapShow: true
+      //   })
+      // }
+      // 如果为空 默认为承运商
+      let role=res.Role || '承运商';
+      wx.setStorageSync("userRole", role);
+      this.setData({
+        role: role,
+      })
+      this.setData({
+        canInbound: this.checkRole('Inbound'),
+        canOutbound: this.checkRole('Outbound'),
+        canInitial: this.checkRole('Initial'),
+        canCount: this.checkRole('Count'),
+        canTracking: this.checkRole('Tracking'),
+        canHistory: this.checkRole('History')
+      })
     })
 
   },
@@ -128,21 +130,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
-    const userRole = wx.getStorageSync('userRole')
-    this.setData({
-      role: userRole,
-    })
-
-    const temp = {
-      canInbound: this.checkRole('Inbound'),
-      canOutbound: this.checkRole('Outbound'),
-      canInitial: this.checkRole('Initial'),
-      canCount: this.checkRole('Count'),
-      canTracking: this.checkRole('Tracking'),
-      canHistory: this.checkRole('History')
-    }
-    this.setData(temp)
     this.clearStroageInfo()
     // 获取到用户信息 且 未登录不进行请求当前用户信息
     if (this.data.userSiteId) return
@@ -201,6 +188,21 @@ Page({
         duration: 2000
       })
     }
+  },
+  setRole(){  
+    const userRole = wx.getStorageSync('userRole');
+    this.setData({
+      role: userRole,
+    });
+    const temp = {
+      canInbound: this.checkRole('Inbound'),
+      canOutbound: this.checkRole('Outbound'),
+      canInitial: this.checkRole('Initial'),
+      canCount: this.checkRole('Count'),
+      canTracking: this.checkRole('Tracking'),
+      canHistory: this.checkRole('History')
+    }
+    this.setData(temp)
   }
 })
 
