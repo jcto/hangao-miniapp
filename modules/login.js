@@ -182,7 +182,7 @@ class loginModules extends HTTP {
   }
   
 // chn 入库获取city info 
-    getInCity(){
+  getInCity(){
       const City = this.request({
         url:"/Site/GetInStockFlows",
         method: "GET",
@@ -196,6 +196,15 @@ class loginModules extends HTTP {
         method: "GET",
       })
       return City
+    }
+    //chn scan 工人 扫一扫
+    ScanQR(codeNo){
+      const ScanRst = this.request({
+        url:"/MyUser/ScanQR",
+        method: "GET",
+        data:{codeNo}
+      })
+      return ScanRst
     }
 }
 

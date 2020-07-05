@@ -4,6 +4,10 @@ Component({
   data: {
     active: null,
     show: false,
+    CodeNo:"",
+    Customer:'',
+    TareWeight:'',
+    OwnerShip:''
   },
   properties: {
     pageType: {
@@ -25,13 +29,16 @@ Component({
     },
     scan() {
       let _this = this;
-      this.setData({ show: true });
-      return;
       wx.scanCode({
         success: (res) => {
           let result = res.result;
-          LoginModules.getOutCity().then((res) => {
-            this.setData({ show: true });
+          LoginModules.ScanQR(result).then((res) => {
+            res=res||{}
+            this.setData({ show: true,
+              CodeNo:res.CodeNo,
+              TareWeight:res.TareWeight,
+              Customer:res.Customer
+             });
           });
         },
         fail: (res) => {

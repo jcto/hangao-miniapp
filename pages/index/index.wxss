@@ -79,3 +79,6 @@
 .margin10 {
   height: 10rpx;
 }
+.disable-btn{
+  opacity: 0.5;
+}

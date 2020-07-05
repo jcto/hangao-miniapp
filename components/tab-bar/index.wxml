@@ -7,15 +7,15 @@
                 <image class="pop-logo" src="./imgs/logo.png"/>
                 <view class="cell-box">
                     <text class="cell-label">编号：</text>
-                    <text class="cell-value">000009999</text>
+                    <text class="cell-value">{{CodeNo}}</text>
                 </view>
                 <view class="cell-box">                    
                     <text class="cell-label">桶重：</text>
-                    <text class="cell-value">100kg</text>
+                    <text class="cell-value">{{TareWeight}}kg</text>
                 </view>
                 <view class="cell-box">
                     <text class="cell-label">客户：</text>
-                    <text class="cell-value">添加敞开</text>
+                    <text class="cell-value">{{Customer}}</text>
                 </view>
             </view>
         </view>
