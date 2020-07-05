@@ -129,15 +129,11 @@ Page({
    */
   onShow: function () {
 
-   const userRole= wx.getStorageSync('userRole')
-// let userRole='客户'
-// let userRole='承运商'
-// let userRole='工厂'
-// let userRole='管理员'
-this.setData({
-  role: userRole,
-})
-  //  debugger
+  const userRole= wx.getStorageSync('userRole')
+  this.setData({
+    role: userRole,
+  })
+
   const temp={
     canInbound:this.checkRole('Inbound'),
     canOutbound:this.checkRole('Outbound'),
@@ -146,7 +142,6 @@ this.setData({
     canTracking:this.checkRole('Tracking'),
     canHistory:this.checkRole('History')
   }
-  // debugger
     this.setData(temp)
     this.clearStroageInfo()
     // 获取到用户信息 且 未登录不进行请求当前用户信息
@@ -190,7 +185,6 @@ this.setData({
 
   },
   checkRole(name) {
-console.log('roleMap[name]',roleMap[name])
     return (roleMap[name] || []).indexOf(this.data.role) > -1
   },
   navTo(e) {
@@ -207,26 +201,6 @@ console.log('roleMap[name]',roleMap[name])
         duration: 2000
       })
     }
-    return
-    if (this.data.role === '客户') {
-      wx.showToast({
-        title: '请检查权限！',
-        icon: 'none',
-        duration: 2000
-      })
-      return
-    }
-    if (this.data.role === '管理员' && name !== 'Tracking') {
-      wx.showToast({
-        title: '请检查权限！',
-        icon: 'none',
-        duration: 2000
-      })
-      return
-    }
-   
   }
-
-
 })
 
