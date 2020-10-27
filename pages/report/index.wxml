@@ -14,16 +14,16 @@
           <view class="wraper">
             
             <van-row>
-              <van-col span="6"><view class="th">当前站点</view></van-col>
-              <van-col span="6"><view class="th">空桶数</view></van-col>
-              <van-col span="6"><view class="th">满桶数</view></van-col>
-              <van-col span="6"><view class="th">合计数</view></van-col>
+              <van-col span="12"><view class="th">当前站点</view></van-col>
+              <van-col span="4"><view class="th">空桶数</view></van-col>
+              <van-col span="4"><view class="th">满桶数</view></van-col>
+              <van-col span="4"><view class="th">合计数</view></van-col>
             </van-row>
             <van-row wx:for="{{inList}}" wx:key="index">
-              <van-col span="6"><view class="td">{{item.SiteName}}</view></van-col>
-              <van-col span="6"><view class="td">{{item.Empty}}</view></van-col>
-              <van-col span="6"><view class="td">{{item.Full}}</view></van-col>
-              <van-col span="6"><view class="td">{{item.Total}}</view></van-col>
+              <van-col span="12"><view class="td">{{item.SiteName}}</view></van-col>
+              <van-col span="4"><view class="td">{{item.Empty}}</view></van-col>
+              <van-col span="4"><view class="td">{{item.Full}}</view></van-col>
+              <van-col span="4"><view class="td">{{item.Total}}</view></van-col>
             </van-row>
             <!-- <van-row>
               <van-col span="6"><view class="td">1</view></van-col>
@@ -44,14 +44,14 @@
         <view class="section">
           <view class="wraper">
             <van-row>
-              <van-col span="8"><view class="th">起始地</view></van-col>
-              <van-col span="8"><view class="th">目的地</view></van-col>
-              <van-col span="8"><view class="th">在途数</view></van-col>
+              <van-col span="10"><view class="th">起始地</view></van-col>
+              <van-col span="10"><view class="th">目的地</view></van-col>
+              <van-col span="4"><view class="th">在途数</view></van-col>
             </van-row>
             <van-row wx:for="{{outList}}" wx:key="index">
-              <van-col span="8"><view class="td">{{item.StartSite}}</view></van-col>
-              <van-col span="8"><view class="td">{{item.EndSite}}</view></van-col>
-              <van-col span="8"><view class="td">{{item.TransitQty}}</view></van-col>
+              <van-col span="10"><view class="td">{{item.StartSite}}</view></van-col>
+              <van-col span="10"><view class="td">{{item.EndSite}}</view></van-col>
+              <van-col span="4"><view class="td">{{item.TransitQty}}</view></van-col>
             </van-row>
             <!-- <van-row>
               <van-col span="8"><view class="td">1</view></van-col>
